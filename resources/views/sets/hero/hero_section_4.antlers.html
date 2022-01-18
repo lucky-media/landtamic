@@ -1,0 +1,35 @@
+<div class="relative">
+    <div class="container py-10 md:py-32">
+        <div class="flex flex-wrap items-center">
+            <div class="w-full mb-16 md:w-1/2 md:mb-0">
+                <div class="max-w-xl mb-8 text-center md:space-y-4 md:text-left">
+                    {{ partial:components.heading label="{title}" size="h1" }}
+
+                    {{ if has_description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-8" }}
+                    {{ /if }}
+                </div>
+                {{ if toggle and label }}
+                    <div class="flex justify-center md:justify-start">
+                        {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                    </div>
+                {{ /if }}
+            </div>
+            <div class="w-full md:w-1/2">
+                {{# Primary Circle #}}
+                <div class="h-[450px] w-[450px] bg-opacity-20
+            bg-primary-900 filter blur-3xl rounded-full absolute top-0 right-0 transform translate-y-1/2"
+                    style="z-index: -1;">
+                </div>
+                {{# Image #}}
+                {{
+                    partial:components/picture
+                    :image="hero_image"
+                    class="object-contain w-full h-auto mx-auto max-h-[640px]"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </div>
+        </div>
+    </div>
+
+</div>

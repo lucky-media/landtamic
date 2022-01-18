@@ -1,0 +1,27 @@
+<div class="container py-12 md:py-8">
+    <div class="flex flex-wrap items-center">
+        <div class="mb-6 md:w-1/2 md:mb-0">
+            <div class="text-center md:max-w-lg md:text-left">
+                {{ if title }}
+                    {{ partial:components.heading label="{title}" size="h2" }}
+                {{ /if }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" class="mt-2" }}
+                {{ /if }}
+            </div>
+        </div>
+        <div class="w-full md:w-1/2">
+            <div class="grid grid-flow-col-dense gap-6">
+                {{ images }}
+                    {{
+                    partial:components/picture
+                    :image="url"
+                    class="object-contain w-full h-auto max-h-16"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+                {{ /images }}
+            </div>
+        </div>
+    </div>
+</div>

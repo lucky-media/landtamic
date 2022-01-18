@@ -1,0 +1,31 @@
+<div class="relative">
+    {{# Circle  #}}
+    <div class="w-[540px] h-[540px] bg-secondary-100 bg-opacity-50 absolute md:right-[2%] right-[55%] xl:top-[4%] md:top-[14%] rounded-full filter blur-3xl "
+        style="z-index: -1;"></div>
+
+    <div class="container py-20">
+        {{ if title }}
+            <div class="mb-12 text-center md:text-left">
+                {{ partial:components.heading label="{title}" size="h2" }}
+            </div>
+        {{ /if }}
+        <div class="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-12 md:gap-8">
+            {{ features }}
+                <div class="flex flex-col justify-between p-6 bg-white rounded-lg shadow-dark">
+                    {{ partial:components.heading label="{title}" size="h5" class="mb-14" }}
+
+                    {{ if image }}
+                        <div class="w-8 h-8 overflow-hidden">
+                            {{
+                            partial:components/picture
+                            :image="image"
+                            cover="true"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+                        </div>
+                    {{ /if }}
+                </div>
+            {{ /features }}
+        </div>
+    </div>
+</div>

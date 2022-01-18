@@ -1,0 +1,26 @@
+---
+sizes:
+  xs: 'text-xs'
+  sm: 'text-sm'
+  md: 'text-xl'
+types:
+  white: 'text-white'
+  cyan: 'text-cyan-900'
+  brand: 'text-primary-900'
+iconsizes:
+  xs: 'w-[14px] h-[9px]'
+  sm: 'w-[18px] h-[11px]'
+  md: 'w-[22px] h-[14px]'
+---
+
+<a href="{{ link }}"
+    class="inline-flex items-center font-bold space-x-2 group {{ class }} {{ view:classes }} {{ size ? view:sizes[size] : view:sizes['xl'] }} {{ color ? view:types[color] : view:types['brand'] }} {{ class }}">
+    <span>
+        {{ label }}
+    </span>
+    <svg class="transition-transform ease-in-out duration-300 fill-current flex-shrink-0 group-hover:translate-x-2 {{ view:types[color] }} {{ view:iconsizes[icon] }}"
+        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 14">
+        <path
+            d="M14.3 1.7A1 1 0 0115.7.3l6 6a1 1 0 010 1.4l-6 6a1 1 0 01-1.4-1.4L18.58 8H1A1 1 0 010 7a1 1 0 011.01-1H18.6l-4.3-4.3z" />
+    </svg>
+</a>

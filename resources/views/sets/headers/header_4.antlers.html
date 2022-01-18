@@ -1,0 +1,17 @@
+<div class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0 w-full h-full bg-primary-900 bg-opacity-90"></div>
+    <div style="z-index: -1;" class="absolute inset-0 w-full h-full">
+        {{
+            partial:components/picture
+            :image="header_image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+    <div class="container relative z-10">
+        {{ if has_subtitle }}
+            {{ partial:components/lead label="{subtitle}" class="uppercase" size="sm" color="white" }}
+        {{ /if }}
+        {{ partial:components/heading label="{title}" size="h2" color="white" }}
+    </div>
+</div>

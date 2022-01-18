@@ -1,0 +1,17 @@
+<div class="flex flex-wrap pt-6 -mx-6 border-t border-gray-300 divide-x divide-gray-300">
+    <p class="px-6 text-gray-900">Posted on:
+        {{ date }}
+    </p>
+
+    {{ if author }}
+        <p class="px-6 text-gray-900">By:
+            {{ author:name }}
+        </p>
+    {{ /if }}
+
+    {{ if category }}
+        <p class="px-6 text-gray-900">On:
+            {{ category:title }}
+        </p>
+    {{ /if }}
+</div>

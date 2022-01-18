@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="flex flex-wrap items-center">
+        <div class="w-full lg:-ml-6 h-96 lg:h-auto lg:max-w-sm xl:max-w-xl">
+            {{
+                partial:components/picture
+                :image="image"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+
+
+        {{ if enable_form }}
+            <div class="w-full lg:max-w-xl px-5 py-10 lg:py-24 xl:ml-[5%]">
+                {{ if form_title }}
+                    {{ partial:components.heading label="{form_title}" size="h3" }}
+                {{ /if }}
+
+                {{ if form_subtitle }}
+                    {{ partial:components.lead label="{form_subtitle}" size="lg" class="mt-2" }}
+                {{ /if }}
+
+                {{ partial:partials/form }}
+            </div>
+        {{ /if }}
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="relative bg-white">
+    <div class="absolute bottom-0 right-0 w-full lg:top-0 h-1/4 lg:h-full lg:w-1/2 bg-primary-900"></div>
+    <div class="container py-20">
+        <div class="flex flex-col mb-16 lg:w-4/12">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" class="mb-2" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+
+        <div class="grid lg:grid-cols-2">
+            {{ prices }}
+                <div
+                    class="h-full flex flex-col items-center w-full lg:max-w-md xl:max-w-lg bg-white border-2 shadow-xl p-14 border-primary-900 rounded-2xl {{ featured ?= 'lg:-mt-16 lg:ml-[15%] mt-10 relative z-10 lg:self-end' }}">
+                    {{ partial:components.heading label="{title}" size="h4"
+                class="mb-8" }}
+
+                    <div class="flex flex-col items-center mb-8">
+                        {{ if price }}
+                            {{
+                                partial:components.heading
+                                label="{price}"
+                                size="h4"
+                            }}
+                        {{ /if }}
+                        {{ if duration }}
+                            {{
+                    partial:components.lead label="{duration}" size="lg"
+                    color="light-gray" }}
+                        {{ /if }}
+                    </div>
+
+                    {{ if description }}
+                        {{
+                            partial:components.lead
+                            label="{description}"
+                            size="lg"
+                            class="mb-8 text-center"
+                        }}
+                    {{ /if }}
+
+                    <ul class="space-y-2">
+                        {{ features }}
+                            <li class="flex items-center py-2 border-b border-gray-300">
+                                {{ svg src="check" class="w-6 h-6 mr-3 fill-current text-accent-blue" }}
+                                {{ title }}
+                            </li>
+                        {{ /features }}
+                    </ul>
+
+                    {{ if toggle and label }}
+                        <div class="mt-8">
+                            {{
+                                partial:components.button
+                                size="{button_size}"
+                                color="{button_variant ?? 'white'}"
+                            }}
+                        </div>
+                    {{ /if }}
+                </div>
+            {{ /prices }}
+        </div>
+    </div>
+</div>

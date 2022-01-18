@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: has_icon
+        field:
+          default: false
+          display: 'Has Icon'
+          type: toggle
+          icon: toggle
+          listable: hidden
+      -
+        handle: icon
+        field:
+          options:
+            mail: Mail
+            phone: Phone
+            location: Location
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Icon
+          type: select
+          icon: select
+          listable: hidden
+          if:
+            has_icon: 'equals true'
+          validate:
+            - 'required_if:has_icon,true'

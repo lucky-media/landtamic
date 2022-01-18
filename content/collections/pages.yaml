@@ -1,0 +1,9 @@
+title: Pages
+template: pages/show
+layout: layout
+revisions: false
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+structure:
+  root: true
+  max_depth: 1

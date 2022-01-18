@@ -1,0 +1,36 @@
+<div class="bg-primary-900">
+    <div class="container py-12 md:py-20">
+        {{ if title }}
+            <div class="mx-auto mb-12 text-center md:max-w-3xl">
+                {{ partial:components.heading label="{title}" color="white" size="h2" }}
+            </div>
+        {{ /if }}
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {{ features }}
+                <div
+                    class="flex flex-col justify-between px-4 py-5 space-y-5 bg-white rounded-lg lg:px-8 lg:py-10 xl:space-y-10">
+                    {{ if image }}
+                        <div class="w-8 h-8 overflow-hidden">
+                            {{
+                            partial:components/picture
+                            :image="image"
+                            cover="true"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+                        </div>
+                    {{ /if }}
+                    <div class="space-y-3">
+                        {{ partial:components.heading label="{title}" size="h5" }}
+
+                        {{ if description }}
+                            {{ partial:components.lead label="{description}" }}
+                        {{ /if }}
+                    </div>
+                    {{ if toggle and label }}
+                        {{ partial:components.link_button size="{button_size}" icon="xs" color="brand" }}
+                    {{ /if }}
+                </div>
+            {{ /features }}
+        </div>
+    </div>
+</div>

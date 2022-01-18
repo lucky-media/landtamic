@@ -1,0 +1,45 @@
+<div class="container py-12 md:py-20">
+    {{ if title }}
+        <div class="mb-12 text-center md:text-left">
+            {{ partial:components.heading label="{title}" size="h2" }}
+        </div>
+    {{ /if }}
+    <div class="flex flex-wrap items-center">
+        <div class="w-full md:w-1/2">
+            <div class="space-y-12">
+                {{ features }}
+                    <div class="flex items-center">
+                        {{ if image }}
+                            <div class="w-8 h-8 mx-auto mr-4 overflow-hidden md:mr-10">
+                                {{
+                                    partial:components/picture
+                                    :image="image"
+                                    cover="true"
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                            </div>
+                        {{ /if }}
+
+                        <div class="flex-1">
+                            {{ partial:components.heading label="{title}" size="h5" }}
+
+                            {{ if description }}
+                                <div class="mt-2 md:max-w-sm">
+                                    {{ partial:components.lead label="{description}" size="lg" }}
+                                </div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /features }}
+            </div>
+        </div>
+        <div class="order-first w-full mx-auto mb-12 md:w-1/2 md:order-none md:mb-0">
+            {{
+                partial:components/picture
+                :image="feature_image"
+                class="md:max-h-[720px] mx-auto"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

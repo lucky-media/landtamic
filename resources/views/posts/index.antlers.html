@@ -1,0 +1,23 @@
+<div class="container py-16 md:py-20">
+    <div class="max-w-3xl mb-12">
+        {{ partial:components.heading label="{title}" size="h3" }}
+    </div>
+    {{ collection from="posts" limit="6" paginate="true" as="posts" }}
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+            {{ posts }}
+                {{ partial:components.project
+                    has_link="true"
+                    link="{url}"
+                    description="{date}"
+                }}
+            {{ /posts }}
+        </div>
+        {{ paginate }}
+            {{ if prev_page or next_page }}
+                <div class="py-10 mx-auto md:py-16">
+                    {{ partial:partials._pagination }}
+                </div>
+            {{ /if }}
+        {{ /paginate }}
+    {{ /collection }}
+</div>

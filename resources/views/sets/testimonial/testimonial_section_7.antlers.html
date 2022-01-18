@@ -1,0 +1,58 @@
+<div class="py-20 bg-primary-100 md:py-32">
+    <div class="container">
+        <div class="relative max-w-5xl mx-auto">
+            {{ svg src="md-backtick" class="absolute w-16 h-auto fill-current md:w-28 lg:w-32 md:left-14 md:-top-12 -top-6 opacity-30 text-primary-900" }}
+            <div class="text-center md:text-left md:ml-[15%] max-w-lg">
+                {{ if title }}
+                    {{ partial:components.heading label="{title}" size="h2" }}
+                {{ /if }}
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" class="md:w-3/5" }}
+                {{ /if }}
+            </div>
+            <div class="grid grid-rows-2 gap-8 md:grid-flow-col grid-col-1">
+                {{ testimonials }}
+                    <div class="{{ index === 0 ?= 'row-span-2 pt-32' }}">
+                        <div class="p-4 bg-white rounded-lg md:p-8 shadow-dark">
+                            {{ if image }}
+                                <div class="max-w-[140px] mb-8">
+                                    {{
+                                        partial:components/picture
+                                        :image="image"
+                                        class="object-contain w-full h-auto"
+                                        sizes="(min-width: 200px) 35vw, 90vw"
+                                    }}
+                                </div>
+                            {{ /if }}
+                            <div class="flex flex-row items-start">
+                                {{ svg src="backtick" class="flex-shrink-0 w-6 h-6 mr-4 -mt-1 fill-current text-primary-900 opacity-30" }}
+                                <div>
+                                    {{ partial:components.lead label="{description}" size="lg"  }}
+
+                                    {{ if has_author }}
+                                        <div class="mt-6">
+                                            {{
+                                                partial:components.lead
+                                                label="{full_name}"
+                                                weight="bold"
+                                            }}
+
+                                            {{ if position }}
+                                                {{
+                                                    partial:components.lead
+                                                    label="{position}"
+                                                    size="sm"
+                                                    color="light-gray"
+                                                }}
+                                            {{ /if }}
+                                        </div>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ /testimonials }}
+            </div>
+        </div>
+    </div>
+</div>

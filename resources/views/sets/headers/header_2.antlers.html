@@ -1,0 +1,11 @@
+<div class="container py-10 text-center">
+    {{ if has_subtitle }}
+        {{ partial:components/lead label="{subtitle}" class="uppercase" size="sm" }}
+    {{ /if }}
+
+    {{ partial:components/heading label="{title}" size="h2" }}
+
+    <div
+        class="absolute bottom-0 inset-x-0 h-[1px] w-full bg-gradient-to-r from-transparent via-primary-900 to-transparent opacity-20">
+    </div>
+</div>

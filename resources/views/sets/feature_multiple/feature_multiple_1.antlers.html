@@ -1,0 +1,24 @@
+<div class="container py-12 md:py-16">
+    {{ if title }}
+        <div class="mb-12 text-center md:text-left md:mb-10 md:max-w-3xl">
+            {{ partial:components.heading label="{title}" size="h2" }}
+        </div>
+    {{ /if }}
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        {{ features }}
+                <{{ has_link ? 'a' : 'div' }} {{ if has_link }} href="{{ link }}" {{ /if }}>
+                    <div class="w-full overflow-hidden rounded max-h-64">
+                      {{
+                        partial:components/picture
+                        :image="image"
+                        cover="true"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                      }}
+                    </div>
+
+                    {{ partial:components.lead label="{title}" size="md" class="mt-2" }}
+
+                </{{ has_link ? 'a' : 'div' }}>
+        {{ /features }}
+    </div>
+</div>

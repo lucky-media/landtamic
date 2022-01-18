@@ -1,0 +1,34 @@
+<div class="py-16 bg-primary-100">
+    <div class="container">
+        {{ testimonials }}
+            <div class="flex flex-wrap">
+                <div class="relative order-none px-4 mt-10 mb-12 md:mb-0 md:w-1/2 lg:w-3/4 mb:mt-0 md:order-first">
+                    <!-- Backtick -->
+                    {{ svg src="md-backtick" class="absolute fill-current -top-9 -left-12 opacity-30 text-primary-900" }}
+
+                    {{ partial:components.lead label="{description}" size="lg" }}
+
+                    {{ if has_author }}
+                        <div class="mt-12">
+                            {{ partial:components.lead label="{full_name}" weight="bold" color="brand" }}
+
+                            {{ if position }}
+                                {{ partial:components.lead label="{position}" size="sm" }}
+                            {{ /if }}
+                        </div>
+                    {{ /if }}
+                </div>
+                {{ if image }}
+                    <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+                        {{
+                            partial:components/picture
+                            :image="image"
+                            class="object-contain w-full h-auto"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+                    </div>
+                {{ /if }}
+            </div>
+        {{ /testimonials }}
+    </div>
+</div>

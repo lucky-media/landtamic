@@ -1,0 +1,18 @@
+<div class="bg-secondary-900">
+    <div class="container">
+        <div class="py-16 space-y-6 md:max-w-xl">
+            {{ partial:components.heading label="{title}" color="white" size="h2" }}
+            {{ if link }}
+                {{ partial:components.link_button size="md" icon="md" color="white" }}
+            {{ /if }}
+        </div>
+        <div class="-mb-20 md:-mb-40 lg:-mb-52 xl:-mb-96">
+            {{
+                partial:components/picture
+                :image="image"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

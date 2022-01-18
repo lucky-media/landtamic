@@ -1,0 +1,21 @@
+<{{ has_link ? 'a' : 'div' }} {{ if link }} href="{{ link }}" aria-label="{{ label or title }}" {{ /if }} target="{{ target_blank ? '_blank' : '_self' }}">
+<div class="mb-4 overflow-hidden rounded-lg xl:h-96 h-80">
+    {{
+        partial:components/picture
+        :image="image"
+        cover="true"
+        sizes="(min-width: 200px) 35vw, 90vw"
+    }}
+</div>
+
+{{ if title }}
+    {{ partial:components.heading label="{title}" size="h5" class="{{ has_link ?= 'hover:text-secondary-900' }}" }}
+{{ /if }}
+
+{{ if description }}
+    <div class="mt-2">
+        {{ partial:components.lead label="{description}" }}
+    </div>
+{{ /if }}
+
+</{{ has_link ? 'a' : 'div' }}>

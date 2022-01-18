@@ -1,0 +1,41 @@
+---
+variants:
+  desktop: 'lg:inline-flex lg:space-x-4 items-center hidden'
+  mobile: 'flex justify-center pt-4 space-x-4 lg:hidden'
+---
+
+<div class="{{ view:variants[variant] }}">
+    {{ theme:links }}
+        {{ if type == 'button' }}
+            {{
+                partial:components.button
+                href="{link}"
+                color="{button_variant}"
+                size="{button_size}"
+            }}
+        {{ elseif type === 'image_link' }}
+            <a aria-label="{{ aria_label }}"
+                href="{{ link }}">
+                {{
+                    partial:components/picture
+                    :image="image"
+                    class="object-contain w-full h-auto max-h-10"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </a>
+        {{ elseif type === 'social_media' }}
+            {{ social }}
+                <ul class="flex items-center space-x-6">
+                    <li class="group">
+                        <a aria-label="visit {{ icon }}"
+                            class="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-in-out rounded-full bg-primary-900 bg-opacity-10 group-hover:bg-opacity-100"
+                            href="{{ url }}">
+                            {{ svg :src="icon" aria-label="{name} icon" role="img" class="w-6 h-6 text-gray-700 fill-current group-hover:text-white"
+                            }}
+                        </a>
+                    </li>
+                </ul>
+            {{ /social }}
+        {{ /if }}
+    {{ /theme:links }}
+</div>

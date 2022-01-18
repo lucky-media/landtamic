@@ -1,0 +1,37 @@
+<div class="container py-20">
+    <div class="flex flex-col items-center mb-12">
+        {{ if title }}
+            {{ partial:components.heading label="{title}" size="h2" class="mb-2" }}
+        {{ /if }}
+        {{ if description }}
+            {{ partial:components.lead label="{description}" size="lg" }}
+        {{ /if }}
+    </div>
+    <div class="grid gap-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {{ prices }}
+            <div class="p-5 bg-gray-100 border border-gray-700 shadow-xl rounded-2xl">
+                <div class="mb-8">
+                    {{ partial:components.heading label="{title}" size="h4" class="mb-4" }}
+
+                    {{ if description }}
+                        {{ partial:components.lead label="{description}" size="lg" }}
+                    {{ /if }}
+
+                    <div class="flex items-end mt-8">
+                        {{ if price }}
+                            {{ partial:components.heading label="{price}" size="h4" }}
+                        {{ /if }}
+                        {{ if duration }}
+                            {{ partial:components.lead label="{duration}" size="lg" color="light-gray" }}
+                        {{ /if }}
+                    </div>
+                </div>
+
+                {{ if toggle and label }}
+                    {{ partial:components.button size="{button_size}" color="{button_variant ?? 'white'}" }}
+                {{ /if }}
+            </div>
+        {{ /prices }}
+
+    </div>
+</div>

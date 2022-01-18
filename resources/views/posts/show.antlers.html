@@ -1,0 +1,21 @@
+{{ partial:posts/featured_image }}
+
+<div class="container py-10">
+    {{ article }}
+        {{ partial src="sets/blog/{type}" }}
+    {{ /article }}
+
+    <div class="max-w-3xl mx-auto mt-8 overflow-hidden">
+        {{ partial:posts/post_details }}
+
+        {{ if tags }}
+            {{ partial:posts/tags }}
+        {{ /if }}
+
+        {{ partial:posts/social_media_sharing }}
+
+        {{ if author }}
+            {{ partial:posts/author }}
+        {{ /if }}
+    </div>
+</div>

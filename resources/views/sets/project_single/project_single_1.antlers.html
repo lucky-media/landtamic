@@ -1,0 +1,28 @@
+<div class="py-12 md:py-20">
+    <div class="container relative">
+        <div class="flex flex-wrap items-start">
+            <div class="p-8 -mx-4 bg-gray-900 md:-mx-0 md:mt-12 md:w-2/5 lg:w-1/4 rounded-2xl">
+                {{ partial:components.heading label="{title}" color="white" size="h5" class="mb-2" }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" color="white" class="mb-2" }}
+                {{ /if }}
+
+                {{ if has_link }}
+                    {{ partial:components.link_button size="xs" icon="xs" color="white" }}
+                {{ /if }}
+            </div>
+            <div class="w-full pt-8 md:pl-12 md:pt-0 md:w-3/5 lg:w-3/4">
+                {{
+                    partial:components/picture
+                    :image="image"
+                    cover="true"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                 }}
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 w-full h-full bg-accent-ombre md:top-0 md:w-4/5" style="z-index: -1;">
+        </div>
+    </div>
+
+</div>

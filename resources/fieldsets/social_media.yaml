@@ -1,0 +1,72 @@
+title: 'Social Media'
+fields:
+  -
+    handle: toggle_social
+    field:
+      default: false
+      display: 'Toggle Social Media'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
+    handle: social_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Social Title'
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        toggle_social: 'equals true'
+  -
+    handle: social
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            display: Title
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            validate:
+              - required
+            width: 25
+        -
+          handle: url
+          field:
+            input_type: text
+            antlers: false
+            display: URL
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            width: 50
+        -
+          handle: icon
+          field:
+            mode: list
+            container: assets
+            folder: social
+            restrict: true
+            allow_uploads: true
+            show_filename: true
+            max_files: 1
+            display: Icon
+            type: assets
+            icon: assets
+            listable: hidden
+            instructions_position: above
+            width: 25
+      mode: table
+      reorderable: true
+      display: Social
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above

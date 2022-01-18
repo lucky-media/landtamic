@@ -1,0 +1,29 @@
+<div class="py-20 bg-accent-cyan-light">
+    <div class="container">
+        <div class="flex flex-wrap items-center">
+            <div class="order-first mt-12 mb-24 md:mb-0 md:w-1/2 md:mt-0 md:order-none">
+                <div class="max-w-lg">
+                    {{ partial:components.heading label="{title}" size="h4" }}
+
+                    {{ if description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-4" }}
+                    {{ /if }}
+
+                    {{ if has_link }}
+                        <div class="mt-4">
+                            {{ partial:components.link_button size="xs" icon="xs" color="brand" }}
+                        </div>
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 ">
+                {{
+                    partial:components/picture
+                    :image="image"
+                    class="object-contain w-full h-auto max-h-[640px]"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </div>
+        </div>
+    </div>
+</div>

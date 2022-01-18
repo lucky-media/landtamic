@@ -1,0 +1,19 @@
+{{ if max_files === 1 }}
+    <label
+        class="flex flex-col items-center justify-center w-full py-8 text-center duration-200 ease-in-out bg-gray-100 border-2 border-gray-300 border-dashed rounded hover:border-gray-800 transition-border">
+        {{ svg src="upload" class="w-24 h-24 text-gray-800 fill-current" }}
+        <span class="mt-4 text-sm font-bold leading-normal text-gray-800">
+            {{ instructions or 'Drop your file here' }}
+        </span>
+        <input type="file" name="{{ handle }}" class="hidden">
+    </label>
+{{ else }}
+    <label
+        class="flex flex-col items-center justify-center w-full py-8 text-center duration-200 ease-in-out bg-gray-100 border-2 border-gray-300 border-dashed rounded hover:border-gray-800 transition-border">
+        {{ svg src="upload" class="w-24 h-24 text-gray-800 fill- current" }}
+        <span class="mt-4 text-sm font-bold leading-normal text-gray-800">
+            {{ instructions or 'Drop your file here' }}
+        </span>
+        <input type="file" name="{{ handle }}[]" class="hidden" multiple>
+    </label>
+{{ /if }}

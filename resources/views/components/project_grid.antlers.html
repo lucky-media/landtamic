@@ -1,0 +1,29 @@
+---
+span:
+  '0': 'row-span-2 md:col-span-1'
+  '1': 'row-span-1 md:col-span-2'
+  '2': 'row-span-1 md:col-span-1'
+  '3': 'row-span-2 md:col-span-1'
+  '4': 'row-span-2 md:col-span-2'
+  '5': 'row-span-1 md:col-span-1'
+---
+
+<div
+    class="relative overflow-hidden {{ view:span[index] }} {{ if index > 5  }} col-span-3 {{ /if }}">
+    <{{ has_link ? 'a' : 'div' }} {{ if has_link }} href="{{ link }}" target="{{ target_blank ? '_blank' : '_self' }}" {{ /if }} class="w-full h-full">
+        {{
+            partial:components/picture
+            :image="image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+        <div class="absolute top-8 left-6" style="z-index: 1;">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h5" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components.lead label="{description}" }}
+            {{ /if }}
+        </div>
+    </{{ has_link ? 'a' : 'div' }} >
+</div>

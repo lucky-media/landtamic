@@ -1,0 +1,36 @@
+<div class="relative">
+    <div class="absolute top-0 left-0 w-full bg-gray-100 h-1/2" style="z-index: -1;"></div>
+    <div class="container py-16">
+        <div class="flex flex-wrap">
+            <div class="w-full mb-6 lg:w-2/5 lg:mb-0">
+                <div class="max-w-md text-center md:text-left">
+                    {{ if title }}
+                        {{ partial:components.heading label="{title}" size="h2" }}
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="w-full lg:w-3/5">
+                {{ steps }}
+                    <div
+                        class="flex flex-col items-center px-4 md:px-12 lg:px-20 py-4 lg:py-12 md:flex-row {{ index === 0 ? 'bg-primary-900' : 'bg-primary-100' }}">
+                        {{
+                            partial:components/picture
+                            :image="image"
+                            class="object-contain w-full h-auto mb-4 max-h-24"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+
+                        <div class="mt-6 space-y-2 text-center md:ml-10 lg:ml-20 md:max-w-md md:text-left md:mt-0">
+
+                            {{ partial:components.lead label="{title}" color="{{ index === 0 ? 'white' : 'gray' }}" weight="bold" class="tracking-widest" }}
+
+                            {{ if description }}
+                                {{ partial:components.lead label="{description}" color="{{ index === 0 ? 'white' : 'gray' }}" size="sm" }}
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /steps }}
+            </div>
+        </div>
+    </div>
+</div>

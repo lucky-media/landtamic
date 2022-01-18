@@ -1,0 +1,25 @@
+<div class="w-full py-20 md:py-40">
+    <div class="container">
+        <div class="flex flex-col items-center space-y-8 text-center md:space-y-0 md:flex-row md:text-left">
+            <div class="order-first w-full mt-12 md:w-1/2 md:mt-0 md:order-none ">
+                <div class="max-w-xl mb-8 text-center md:text-left">
+                    {{ partial:components.heading label="{title}" size="h1" }}
+                    {{ if has_description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-8" }}
+                    {{ /if }}
+                </div>
+                {{ if toggle and label }}
+                    {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                {{ /if }}
+            </div>
+            <div class="w-full md:w-1/2">
+                {{
+                    partial:components/picture
+                    :image="hero_image"
+                    class="object-contain w-full h-auto mx-auto max-h-[640px]"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </div>
+        </div>
+    </div>
+</div>

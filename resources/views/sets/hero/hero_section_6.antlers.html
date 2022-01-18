@@ -1,0 +1,39 @@
+<div class="relative py-20 overflow-hidden md:py-40">
+    {{# Gradient Backgound #}}
+    <div style="background: linear-gradient(194.01deg, #D9E8EF 9.6%, #EAF2F5 89.64%); z-index:-1"
+        class="absolute top-0 left-0 w-full h-full">
+    </div>
+    <div class="container">
+        <div class="flex flex-wrap items-center -mx-4">
+            <div class="order-none w-full mb-20 md:mb-0 md:w-1/2 md:px-4 md:order-first">
+                <div class="mb-8 text-center md:text-left">
+                    {{ partial:components.heading label="{title}" size="h1" }}
+
+                    {{ if has_description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-4" }}
+                    {{ /if }}
+
+                    {{ if toggle and label }}
+                        <a href="{{ link }}"
+                            target="{{ target_blank ? '_blank' : '_self' }}"
+                            class="inline-flex items-center justify-center mt-8 md:justify-start">
+                            {{ svg src="play" class="flex-shrink-0 w-12 h-12 mr-2 text-black stroke-current" }}
+                            <span class="w-20 h-[2px] bg-black"></span>
+                            <p class="ml-2 text-sm font-extrabold tracking-wider text-gray-900 uppercase">
+                                {{ label }}
+                            </p>
+                        </a>
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="w-full mb-8 md:w-1/2 md:px-4 md:mb-0">
+                {{
+                    partial:components/picture
+                    :image="hero_image"
+                    class="object-contain w-full h-auto mx-auto max-h-[640px]"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </div>
+        </div>
+    </div>
+</div>

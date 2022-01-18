@@ -1,0 +1,40 @@
+<div class="bg-primary-900">
+    <div class="container py-10 md:py-16">
+        <div class="flex flex-wrap -mx-8">
+            <div class="px-8 mb-12 lg:mb-0 md:w-1/2">
+                {{ if title }}
+                    {{ partial:components.heading label="{title}" size="h2" color="light-gray" }}
+                {{ /if }}
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" color="fair-gray" }}
+                {{ /if }}
+            </div>
+            <div class="w-full px-8 md:w-1/2">
+                <div class="grid grid-rows-1 gap-16 lg:grid-cols-2">
+                    {{ members }}
+                        <div class="flex flex-row items-center">
+                            {{ if image }}
+                                <div class="flex-shrink-0 w-16 h-16 overflow-hidden rounded-full">
+                                    {{
+                                        partial:components/picture
+                                        :image="image"
+                                        cover="true"
+                                        sizes="(min-width: 200px) 35vw, 90vw"
+                                    }}
+                                </div>
+                            {{ /if }}
+                            <div class="flex flex-col ml-8">
+                                <p class="text-lg font-bold text-gray-100">
+                                    {{ full_name }}
+                                </p>
+                                <p class="text-sm font-medium text-primary-100">
+                                    {{ position }}
+                                </p>
+                            </div>
+                        </div>
+                    {{ /members }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

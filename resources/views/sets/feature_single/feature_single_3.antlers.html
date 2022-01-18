@@ -1,0 +1,28 @@
+<div class="pb-20">
+    <div class="h-64 md:h-auto max-h-[600px] overflow-hidden">
+        {{
+            partial:components/picture
+            :image="image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+
+    <div class="container relative z-10">
+        <div class="w-full -mt-24 bg-white rounded-t-lg md:4/5 lg:w-1/2 lg:-mt-56 md:-mt-40 md:ml-auto">
+            <div class="p-8 bg-white rounded-t-lg md:p-16">
+                {{ partial:components.heading label="{title}" size="h3" }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" class="mt-4" }}
+                {{ /if }}
+
+                {{ if toggle and label }}
+                    <div class="mt-8">
+                        {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>

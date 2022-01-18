@@ -1,0 +1,36 @@
+<div class="py-12 md:py-20">
+    <div class="relative overflow-hidden">
+        <div class="absolute left-0 w-full -bottom-20 xl:w-7/12 md:top-0 md:h-full h-3/4 bg-accent-cyan"
+            style="z-index: -1;">
+        </div>
+        <div class="container">
+            <div class="flex flex-wrap items-center">
+                <div class="order-2 w-full md:w-1/2 md:order-1 md:mb-0">
+                    {{
+                        partial:components/picture
+                        class="pt-16"
+                        :image="image"
+                        cover="true"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                    }}
+                </div>
+                <div class="order-1 md:pl-10 xl:pl-20 md:w-1/2 md:order-2">
+
+                    {{ if description }}
+                        <p class="mb-8 text-lg font-normal text-gray-900">
+                            {{ description }}
+                        </p>
+                    {{ /if }}
+
+
+                    {{ partial:components.heading label="{title}" size="h4" class="max-w-md" }}
+
+
+                    {{ if has_link }}
+                        {{ partial:components.link_button size="xs" icon="xs" color="brand" class="mt-8" }}
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

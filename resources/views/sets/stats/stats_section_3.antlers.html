@@ -1,0 +1,13 @@
+<div class="container py-16">
+    <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2">
+        {{ stats }}
+            <div class="flex flex-col justify-center pl-3 border-l-2 border-primary-900">
+                {{ partial:components.heading label="{number}" size="h4" }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" }}
+                {{ /if }}
+            </div>
+        {{ /stats }}
+    </div>
+</div>

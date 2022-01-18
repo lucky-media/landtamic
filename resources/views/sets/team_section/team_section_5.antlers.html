@@ -1,0 +1,58 @@
+<div class="py-10 md:py-16 bg-primary-100">
+    <div class="container">
+        <div class="max-w-xl mb-12 md:mb-24">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+            {{ members }}
+                <div class="px-4 mb-12 md:w-1/2 md:mb-24">
+                    <div class="flex flex-col lg:flex-row">
+                        {{ if image }}
+                            <div class="flex-shrink-0 overflow-hidden md:w-64 rounded-2xl">
+                                {{
+                                    partial:components/picture
+                                    :image="image"
+                                    class="object-cover w-full h-full "
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                            </div>
+                        {{ /if }}
+                        <div class="flex flex-col mt-4 lg:mt-0 lg:ml-4">
+                            {{ partial:components.heading label="{full_name}" size="h6" }}
+
+                            {{ if position }}
+                                {{ partial:components.lead label="{position}" size="sm" color="brand" }}
+                            {{ /if }}
+
+                            {{ if biography }}
+                                {{ partial:components.lead label="{biography}" size="lg" class="mt-4" }}
+                            {{ /if }}
+
+                            {{ if social }}
+                                <ul class="flex flex-row mt-4">
+                                    {{ social }}
+                                        <li>
+                                            <a aria-label="visit {{ icon }}"
+                                                class="flex items-center justify-center flex-shrink-0 w-8 h-8"
+                                                href="{{ url }}">
+                                                {{ svg :src="icon" class="w-6 h-6 fill-current text-primary-900"
+                                                }}
+                                            </a>
+                                        </li>
+                                    {{ /social }}
+                                </ul>
+                            {{ /if }}
+                        </div>
+                    </div>
+                </div>
+            {{ /members }}
+        </div>
+
+    </div>
+</div>

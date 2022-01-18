@@ -1,0 +1,27 @@
+<div class="bg-gray-100 py-14 md:py-24">
+    <div class="container">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-6 text-center md:mb-12">
+                {{ if title }}
+                    {{ partial:components.heading label="{title}" size="h2" }}
+                {{ /if }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" size="lg" class="mt-2" }}
+                {{ /if }}
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+                {{ images }}
+                    <div class="flex items-center justify-center p-2 bg-white md:p-8 rounded-2xl shadow-gray">
+                        {{
+                            partial:components/picture
+                            :image="url"
+                            class="object-contain w-full h-auto max-h-10"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+                    </div>
+                {{ /images }}
+            </div>
+        </div>
+    </div>
+</div>

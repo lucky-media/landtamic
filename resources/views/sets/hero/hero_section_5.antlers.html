@@ -1,0 +1,30 @@
+<div class="bg-gray-200">
+    <div class="container py-20 md:py-40">
+        <div class="flex flex-wrap items-center">
+            <div class="order-none w-full md:w-1/2 md:px-4 md:order-first">
+                <div class="mb-8 text-center md:text-left">
+                    {{ partial:components.heading label="{title}" size="h1" }}
+
+                    {{ if has_description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-8" }}
+                    {{ /if }}
+                </div>
+                {{ if toggle and label }}
+                    <div class="flex justify-center md:justify-start">
+                        {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                    </div>
+                {{ /if }}
+            </div>
+            <div class="w-full mt-20 md:mt-0 md:w-1/2 md:px-4">
+                <div class="md:ml-[10%]">
+                    {{
+                        partial:components/picture
+                        :image="hero_image"
+                        class="object-contain w-full h-auto mx-auto max-h-[640px]"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

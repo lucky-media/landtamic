@@ -1,0 +1,21 @@
+{{ if image_grid === 'two' }}
+    {{ var:grid_classes value="md:grid-cols-2" }}
+{{ elseif image_grid === 'three' }}
+    {{ var:grid_classes value="md:grid-cols-3" }}
+{{ elseif image_grid === 'four' }}
+    {{ var:grid_classes value="md:grid-cols-4" }}
+{{ /if }}
+
+<div class="max-w-5xl py-8 mx-auto">
+    <div class="grid {{ var:grid_classes }} gap-8">
+        {{ images }}
+            {{
+                partial:components/picture
+                :image="url"
+                class="rounded-lg max-h-96"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        {{ /images }}
+    </div>
+</div>

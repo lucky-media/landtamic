@@ -1,0 +1,29 @@
+<div class="container py-16">
+    <div class="relative flex flex-wrap overflow-hidden bg-primary-900 rounded-2xl">
+        <div class="py-10 md:w-3/4 px-11 md:pl-11">
+            <div class="relative z-10 text-center lg:max-w-lg md:text-left">
+                {{ partial:components.heading label="{title}" color="white" size="h2" }}
+
+                {{ if toggle and label }}
+                    <div class="flex flex-col items-center mt-8 space-y-5 md:items-stretch md:space-y-0 md:flex-row">
+                        <input type="email" placeholder="Your work email address"
+                            class="w-full py-3 text-center border-none rounded-md md:text-left md:w-64 lg:w-72 md:rounded-none md:rounded-l-md" />
+                        <button
+                            class="px-3 py-3 text-sm font-bold text-white bg-gray-900 rounded-md md:px-6 md:rounded-none md:rounded-r-md">
+                            {{ label }}
+                        </button>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        <div class="w-full mt-20 md:w-2/6 md:mt-0">
+            <div
+                class="absolute -translate-x-16 md:translate-x-0 top-3/4 md:top-1/2 transform md:-translate-y-1/2 md:-right-16 w-[450px] h-[450px] bg-gray-100 rounded-full bg-opacity-20">
+            </div>
+            <div
+                class="absolute -translate-x-16 md:translate-x-0 top-2/3 md:top-1/2 transform md:-translate-y-1/2 md:-right-32 w-[450px] h-[450px] bg-gray-100 rounded-full bg-opacity-20">
+            </div>
+        </div>
+    </div>
+</div>

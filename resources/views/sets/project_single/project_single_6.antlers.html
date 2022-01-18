@@ -1,0 +1,30 @@
+<div class="container py-20">
+    <div class="relative bg-primary-900">
+        <div class="relative z-10 flex flex-col px-5 pt-12 pb-64 md:pb-32">
+            <div class="w-full max-w-md mx-auto text-left lg:max-w-lg md:text-center">
+                {{ partial:components.heading label="{title}" color="white" size="h4" }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" color="white" size="lg" class="mt-4" }}
+                {{ /if }}
+            </div>
+        </div>
+
+        {{ if has_link }}
+            <a href="{{ link }}"
+                target="{{ target_blank ? '_blank' : '_self' }}"
+                class="absolute bottom-0 p-4 text-white bg-gray-900 md:right-20 right-4">
+                {{ label }}
+            </a>
+        {{ /if }}
+
+        <div class="absolute bottom-0 left-0 w-full max-w-sm lg:max-w-lg">
+            {{
+                partial:components/picture
+                :image="image"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

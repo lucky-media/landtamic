@@ -1,0 +1,80 @@
+<ul class="flex items-center justify-center space-x-6 cursor-default md:space-x-10">
+    {{ if prev_page }}
+        <a aria-label="prev-page" href="{{ prev_page }}">
+            {{ svg src="arrow-left" class="w-8 h-8 text-gray-900 fill-current hover:text-secondary-900" }}
+        </a>
+    {{ else }}
+        <li class="cursor-not-allowed">
+            {{ svg src="arrow-left" class="w-8 h-8 text-gray-900 fill-current opacity-20" }}
+        </li>
+    {{ /if }}
+
+    {{ links:segments }}
+        {{ first }}
+            {{ if page == current_page }}
+                <li class="justify-center text-sm hover:text-secondary-900">
+                    {{ page }}
+                </li>
+            {{ else }}
+                <a href="{{ url }}">
+                    <li class="justify-center text-sm text-gray-900 hover:text-secondary-900">
+                        {{ page }}
+                    </li>
+                </a>
+            {{ /if }}
+        {{ /first }}
+
+        {{ if slider }}
+            <li class="disabled:opacity-50" disabled>
+                <span class="text-gray-900 opacity-20">...</span>
+            </li>
+        {{ /if }}
+
+        {{ slider }}
+            {{ if page == current_page }}
+                <li class="active">
+                    <span>
+                        {{ page }}
+                    </span>
+                </li>
+            {{ else }}
+                <li>
+                    <a href="{{ url }}">
+                        {{ page }}
+                    </a>
+                </li>
+            {{ /if }}
+        {{ /slider }}
+
+        {{ if slider || (!slider && last) }}
+            <li class="disabled:opacity-50" disabled>
+                <span>...</span>
+            </li>
+        {{ /if }}
+
+        {{ last }}
+            {{ if page == current_page }}
+                <li class="active">
+                    {{ page }}
+                </li>
+            {{ else }}
+                <li>
+                    <a href="{{ url }}">
+                        {{ page }}
+                    </a>
+                </li>
+            {{ /if }}
+        {{ /last }}
+    {{ /links:segments }}
+
+    {{# next #}}
+    {{ if next_page }}
+        <a aria-label="next-page" href="{{ next_page }}">
+            {{ svg src="arrow-right" class="w-8 h-8 text-gray-900 fill-current hover:text-secondary-900" }}
+        </a>
+    {{ else }}
+        <li class="cursor-not-allowed">
+            {{ svg src="arrow-right" class="w-8 h-8 text-gray-900 fill-current opacity-20" }}
+        </li>
+    {{ /if }}
+</ul>

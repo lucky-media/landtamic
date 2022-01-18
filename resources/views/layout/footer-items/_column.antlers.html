@@ -1,0 +1,9 @@
+<div class="{{ theme:span_column ?= 'col-span-2' }} space-y-8">
+    {{ theme:footer_column }}
+        {{ if type === 'image' }}
+            {{ partial:layout/footer-items/image align="left" }}
+        {{ else }}
+            {{ partial src="layout/footer-items/{type}" }}
+        {{ /if }}
+    {{ /theme:footer_column }}
+</div>

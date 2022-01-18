@@ -1,0 +1,8 @@
+<textarea
+    class="w-full h-64 px-4 py-3 rounded border border-transparent focus-visible:ring focus-visible:ring-primary-900 focus-visible:ring-opacity-60 bg-gray-100 text-gray-800 placeholder-gray-800 {{ error ? 'border-red-500' : 'border-transparent' }}"
+    id="{{ handle }}"
+    name="{{ handle }}"
+    rows="5"
+    placeholder="{{ placeholder }}"
+    {{ validate | contains:required ?= "required" }}
+>{{ old }}</textarea>

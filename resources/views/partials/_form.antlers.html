@@ -1,0 +1,29 @@
+---
+sizing:
+  25: 'md:col-span-3'
+  33: 'md:col-span-4'
+  50: 'md:col-span-6'
+  66: 'md:col-span-8'
+  75: 'md:col-span-9'
+  100: 'md:col-span-12'
+---
+
+{{ form:create class="w-full" :in="contact_form:handle" }}
+    <div class="grid gap-6 mt-10">
+        {{ fields }}
+            <div class="flex flex-col {{ view:sizing[width] }}">
+                <label class="sr-only" for="{{ handle }}">
+                    {{ display }}
+                </label>
+                {{ field }}
+
+                {{ if error }}
+                    <p class="mt-2 text-sm font-medium text-red-500">
+                        {{ error }}
+                    </p>
+                {{ /if }}
+            </div>
+        {{ /fields }}
+        {{ partial:components.button label="Send" size="md" color="brand"}}
+    </div>
+{{ /form:create }}

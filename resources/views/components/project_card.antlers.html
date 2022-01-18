@@ -1,0 +1,20 @@
+ <div class="space-y-6">
+     <div class="rounded-lg overflow-hidden h-auto max-h-[600px] mb-6">
+         {{
+            partial:components/picture
+            :image="image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+          }}
+     </div>
+     <div class="space-y-2">
+             {{ if title }}
+                 <{{ has_link ? 'a' : 'span' }} {{ if has_link }} href="{{ link }}" {{ /if }}>
+                     {{ partial:components.heading label="{title}" size="h5" }}
+                 </{{ has_link ? 'a' : 'span' }}>
+             {{ /if }}
+             {{ if description }}
+                 {{ partial:components.lead label="{description}"  }}
+             {{ /if }}
+     </div>
+ </div>

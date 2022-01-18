@@ -1,0 +1,57 @@
+<div class="container py-20">
+    <div class="flex flex-wrap -mx-4">
+        <div class="px-4 mb-10 md:w-2/5 lg:w-1/3 md:mb-0">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+        <div class="px-4 md:w-3/5 lg:w-8/12">
+            <div class="flex flex-col divide-y-2">
+                {{ members }}
+                    <div class="flex flex-col pt-12 pb-12 lg:flex-row first:pt-0">
+                        {{ if image }}
+                            <div class="w-full md:max-w-[256px] md:max-h-[325px] overflow-hidden rounded-2xl">
+                                {{
+                                    partial:components/picture
+                                    :image="image"
+                                    class="object-cover w-full h-full "
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                            </div>
+                        {{ /if }}
+                        <div class="mt-4 lg:mt-0 lg:ml-4">
+                            <div class="flex flex-col">
+                                {{ partial:components.heading label="{full_name}" size="h6" }}
+
+                                {{ if position }}
+                                    {{ partial:components.lead label="{position}" size="sm" color="brand" }}
+                                {{ /if }}
+
+                                {{ if biography }}
+                                    {{ partial:components.lead label="{biography}" size="lg" class="mt-3 md:mt-8" }}
+                                {{ /if }}
+                            </div>
+                            {{ if social }}
+                                <ul class="flex mt-4 md:mt-10">
+                                    {{ social }}
+                                        <li>
+                                            <a aria-label="visit {{ icon }}"
+                                                class="flex items-center justify-center flex-shrink-0 w-10 h-10"
+                                                href="{{ url }}">
+                                                {{ svg :src="icon" class="w-6 h-6 fill-current text-primary-900"
+                                                }}
+                                            </a>
+                                        </li>
+                                    {{ /social }}
+                                </ul>
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /members }}
+            </div>
+        </div>
+    </div>
+</div>

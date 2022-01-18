@@ -1,0 +1,27 @@
+---
+classes: 'inline-block font-bold focus:outline-none focus-visible:ring focus:ring-primary-900 focus:ring-opacity-20 focus-visible:ring-offset-2 transition-all duration-300 ease-in-out'
+sizes:
+  sm: 'px-3 py-[6px] text-xs'
+  md: 'px-4 py-[10px] text-sm'
+  lg: 'px-[26px] py-[10px] text-xl'
+  xl: 'px-6 py-4 text-xl'
+types:
+  brand: 'bg-primary-900 text-white hover:text-primary-900 hover:bg-white hover:border-2 hover:border-primary-900 border-2 border-transparent'
+  secondary: 'bg-gray-200 text-primary-900 hover:border-2 hover:border-primary-900 border-2 border-transparent'
+  white: 'text-primary-900 bg-white hover:bg-transparent hover:text-primary-900 hover:border-2 hover:border-primary-900 border-2 border-transparent'
+border:
+  lg: 'rounded-lg'
+  full:  'rounded-full'
+---
+
+{{ if link }}
+    <a href="{{ link }}" target="{{ target_blank ? '_blank' : '_self' }}"
+        class="{{ view:classes }} {{ size ? view:sizes[size] : view:sizes['xl']  }} {{ color ? view:types[color] : view:types['brand']  }} {{ radius ? view:border[radius] : view:border['lg'] }} {{ class }}">
+        {{ label }}
+    </a>
+{{ else }}
+    <button type="{{ button_type or 'submit' }}"
+        class="{{ view:classes }} {{ size ? view:sizes[size] : view:sizes['xl']  }} {{ color ? view:types[color] : view:types['brand']  }} {{ radius ? view:border[radius] : view:border['lg'] }} {{ class }}">
+        {{ label }}
+    </button>
+{{ /if }}

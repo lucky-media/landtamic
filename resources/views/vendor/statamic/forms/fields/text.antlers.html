@@ -1,0 +1,10 @@
+<input
+    class="w-full px-4 py-3  rounded border focus-visible:ring focus-visible:ring-primary-900 focus-visible:ring-opacity-60 bg-gray-100 text-gray-800 placeholder-gray-800 {{ error ? 'border-red-500' : 'border-transparent' }}"
+    id="{{ handle }}"
+    name="{{ handle }}"
+    type="{{ input_type ?? 'text' }}"
+    placeholder="{{ placeholder or display }}"
+    {{ validate | contains:required ?= "required" }}
+    {{ old ?= value="{old}" }}
+/>
+

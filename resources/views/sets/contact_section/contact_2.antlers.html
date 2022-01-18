@@ -1,0 +1,52 @@
+<div class="overflow-hidden max-h-96">
+    {{
+        partial:components/picture
+        :image="image"
+        cover="true"
+        sizes="(min-width: 200px) 35vw, 90vw"
+    }}
+</div>
+
+<div class="container py-20">
+    <div class="grid gap-8 md:grid-cols-2">
+        {{ if enable_location }}
+            <div>
+                <div class="mb-8 space-y-2">
+                    {{ if location_title }}
+                        {{ partial:components.heading label="{location_title}" size="h3" }}
+                    {{ /if }}
+
+                    {{ if location_subtitle }}
+                        {{ partial:components.lead label="{location_subtitle}" size="lg" }}
+                    {{ /if }}
+
+                </div>
+                <div class="flex flex-col space-y-10">
+                    {{ locations }}
+                        <div class="flex flex-col">
+                            {{ partial:components.heading label="{title}" size="h4" }}
+
+                            <div class="mt-4 prose prose-p:text-gray-900 prose-a:text-secondary-900">
+                                {{ rich_text }}
+                            </div>
+                        </div>
+                    {{ /locations }}
+                </div>
+            </div>
+        {{ /if }}
+
+        {{ if enable_form }}
+            <div class="w-full max-w-xl md:ml-auto">
+                {{ if form_title }}
+                    {{ partial:components.heading label="{form_title}" size="h3" }}
+                {{ /if }}
+
+                {{ if form_subtitle }}
+                    {{ partial:components.lead label="{form_subtitle}" size="lg" class="mt-2" }}
+                {{ /if }}
+
+                {{ partial:partials/form }}
+            </div>
+        {{ /if }}
+    </div>
+</div>

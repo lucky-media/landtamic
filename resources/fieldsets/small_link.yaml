@@ -1,0 +1,42 @@
+title: 'Small Link'
+fields:
+  -
+    handle: has_link
+    field:
+      display: 'Has Link'
+      type: toggle
+      icon: toggle
+      instructions: 'Enable Link'
+      listable: hidden
+  -
+    handle: label
+    field:
+      input_type: text
+      antlers: false
+      display: Label
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        has_link: 'equals true'
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      icon: link
+      width: 66
+      listable: hidden
+      if:
+        has_link: 'equals true'
+  -
+    handle: target_blank
+    field:
+      display: 'Target Blank'
+      type: toggle
+      icon: toggle
+      instructions: 'Open link in new tab.'
+      width: 33
+      listable: hidden
+      if:
+        has_link: 'equals true'

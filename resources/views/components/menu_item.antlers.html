@@ -1,0 +1,18 @@
+{{ if toggle_button }}
+    <li class="py-2 lg:py-0">
+        {{
+            partial:components.button
+            link="{url}"
+            color="{button_variant}"
+            size="{button_size}"
+            label="{title}"
+        }}
+    </li>
+{{ else }}
+    <li>
+        <a class="inline-block py-2 text-xl font-bold text-gray-900 no-underline transition-all duration-300 ease-in-out lg:text-sm lg:py-0 lg:px-0 hover:text-secondary-900"
+            href="{{ url }}">
+            {{ title }}
+        </a>
+    </li>
+{{ /if }}

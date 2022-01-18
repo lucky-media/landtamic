@@ -1,0 +1,14 @@
+<div class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0 w-full h-full bg-primary-900 bg-opacity-90"></div>
+    <div style="z-index: -1;" class="absolute inset-0 w-full h-full">
+        {{
+            partial:components/picture
+            :image="image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center">
+        {{ partial:components/heading size="h2" label="{title}" color="white" }}
+    </div>
+</div>

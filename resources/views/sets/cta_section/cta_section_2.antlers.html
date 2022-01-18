@@ -1,0 +1,10 @@
+<div class="container px-10 py-12 md:py-16 md:px-0">
+    <div class="mx-auto text-center md:w-10/12 xl:w-7/12">
+        {{ partial:components.heading label="{title}" size="h2" }}
+        {{ if toggle and label }}
+            <div class="mt-10">
+                {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+            </div>
+        {{ /if }}
+    </div>
+</div>

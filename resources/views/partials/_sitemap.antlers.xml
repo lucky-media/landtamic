@@ -1,0 +1,15 @@
+{{ xml_header }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{ theme:sitemap_collections }}
+        {{ collection from="{handle}" as="results" }}
+            {{ results }}
+                <url>
+                    <loc>{{ permalink }}</loc>
+                    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+                    <changefreq>{{ theme:sitemap_change_frequency ? theme:sitemap_change_frequency : 'weekly' }}</changefreq>
+                    <priority>{{ theme:sitemap_priority ? theme:sitemap_priority : '0.5' }}</priority>
+                </url>
+            {{ /results }}
+        {{ /collection }}
+    {{ /theme:sitemap_collections }}
+</urlset>

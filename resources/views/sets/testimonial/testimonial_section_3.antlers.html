@@ -1,0 +1,56 @@
+<div class="relative w-full py-20 bg-primary-900">
+    <div class="container">
+        <!-- Backtick -->
+        {{ svg src="big-backtick" class="absolute right-0 top-10 opacity-30" }}
+        <!-- Backtick -->
+
+        {{ if title }}
+            <div class="mb-6 text-center md:text-left md:mb-8">
+                {{ partial:components.heading label="{title}" size="h2" color="white" }}
+            </div>
+        {{ /if }}
+
+        <div class="grid gap-8 md:grid-cols-2">
+            {{ testimonials }}
+                <div>
+                    <div class="text-center bg-white rounded-lg md:p-6 p-7 lg:p-8">
+                        {{ if title }}
+                            {{ partial:components.lead label="{title}" size="md" }}
+                        {{ /if }}
+
+                        <div class="max-w-lg mx-auto mt-2">
+                            {{ partial:components.lead label="{description}" size="sm" }}
+                        </div>
+                    </div>
+                    <!-- Triangle -->
+                    <div class="w-6 mx-auto overflow-hidden">
+                        <div class="w-6 h-4 origin-top-left transform -rotate-45 bg-white"></div>
+                    </div>
+                    <!-- Triangle -->
+                    {{ if has_author }}
+                        <div class="flex items-center justify-center mt-2 md:mt-4">
+                            {{ if image }}
+                                <div class="w-16 h-16 overflow-hidden rounded-full">
+                                    {{
+                                        partial:components/picture
+                                        :image="image"
+                                        cover="true"
+                                        sizes="(min-width: 200px) 35vw, 90vw"
+                                    }}
+                                </div>
+                            {{ /if }}
+                            <div class="ml-4">
+                                {{ partial:components.lead label="{full_name}" weight="bold" color="white" }}
+
+
+                                {{ if position }}
+                                    {{ partial:components.lead label="{position}" size="sm" color="white" }}
+                                {{ /if }}
+                            </div>
+                        </div>
+                    {{ /if }}
+                </div>
+            {{ /testimonials }}
+        </div>
+    </div>
+</div>

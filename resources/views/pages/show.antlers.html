@@ -1,0 +1,7 @@
+{{ if custom_page_header }}
+    {{ partial src="sets/headers/{header_version}" }}
+{{ /if }}
+
+{{ blocks }}
+    {{ partial src="sets/{type}/{version}" }}
+{{ /blocks }}

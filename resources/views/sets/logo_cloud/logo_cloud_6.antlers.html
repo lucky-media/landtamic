@@ -1,0 +1,34 @@
+<div class="relative">
+    <div class="container py-16">
+        <div class="flex flex-wrap -mx-4">
+            <div class="px-4 mb-16 md:w-2/5 md:mb-0">
+                <div class="text-center md:text-left">
+                    {{ if title }}
+                        {{ partial:components.heading label="{title}" size="h2" }}
+                    {{ /if }}
+
+                    {{ if description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-2" }}
+
+                    {{ /if }}
+                </div>
+            </div>
+
+            <div class="px-4 py-4 bg-primary-900 md:bg-transparent md:py-0 md:w-1/2 md:ml-auto">
+                <div class="grid grid-cols-4 gap-16 md:grid-cols-none md:grid-flow-col md:grid-rows-2">
+                    {{ images }}
+                        {{
+                            partial:components/picture
+                            :image="url"
+                            class="object-contain w-full h-auto max-h-16"
+                            sizes="(min-width: 200px) 35vw, 90vw"
+                        }}
+                    {{ /images }}
+                </div>
+            </div>
+
+            <div style="z-index: -1;" class="absolute top-0 bottom-0 right-0 w-1/2 bg-transparent md:bg-primary-900">
+            </div>
+        </div>
+    </div>
+</div>

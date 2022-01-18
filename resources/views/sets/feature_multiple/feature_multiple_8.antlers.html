@@ -1,0 +1,36 @@
+<div class="container py-12 md:py-20">
+    {{ if title }}
+        <div class="mx-auto mb-12 text-center md:max-w-xl">
+            {{ partial:components.heading label="{title}" size="h2" }}
+        </div>
+    {{ /if }}
+    <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full px-4 mb-12 md:mb-0 md:max-w-xl">
+            {{
+                partial:components/picture
+                :image="feature_image"
+                cover="true"
+                class="mx-auto"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+        <div class="px-4 md:w-1/2">
+            <div class="space-y-12 md:px-10">
+                {{ features }}
+                    <div class="flex flex-col items-start">
+                        <div class="inline-flex items-center">
+                            <span class="flex-shrink-0 w-1 h-1 mr-3 rounded-full bg-primary-900"></span>
+                            {{ partial:components.heading label="{title}" size="h5" }}
+                        </div>
+
+                        {{ if description }}
+                            <div class="mt-2 md:max-w-md">
+                                {{ partial:components.lead label="{description}" size="lg"  }}
+                            </div>
+                        {{ /if }}
+                    </div>
+                {{ /features }}
+            </div>
+        </div>
+    </div>
+</div>

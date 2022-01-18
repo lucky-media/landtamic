@@ -1,0 +1,664 @@
+sections:
+  general:
+    display: General
+    fields:
+      -
+        handle: logo_normal
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Logo Normal'
+          type: assets
+          icon: assets
+          instructions: 'Normal logo that will be displayed through the website, **SVG** is preferred.'
+          width: 50
+          listable: hidden
+      -
+        handle: logo_dark
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: 'Logo Dark'
+          type: assets
+          icon: assets
+          instructions: 'Dark version of the logo that will be displayed through the website, **SVG** is preferred.'
+          width: 50
+          listable: hidden
+          max_files: 1
+      -
+        handle: logo_mark
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Logo Mark'
+          type: assets
+          icon: assets
+          instructions: 'Used as overlay/logo in footer and other places.'
+          listable: hidden
+          instructions_position: above
+          max_files: 1
+  menu:
+    display: Menu
+    fields:
+      -
+        handle: logo_position
+        field:
+          options:
+            left: Left
+            center: Center
+          default: left
+          display: 'Logo Position'
+          type: button_group
+          icon: button_group
+          width: 50
+          listable: hidden
+      -
+        handle: menu_position
+        field:
+          options:
+            left: Left
+            center: Center
+            right: Right
+          default: right
+          display: 'Menu Position'
+          type: button_group
+          icon: button_group
+          width: 50
+          listable: hidden
+      -
+        handle: show_links
+        field:
+          default: false
+          display: 'Show Links'
+          type: toggle
+          icon: toggle
+          instructions: 'Enable this to display links in the right side of the menu.'
+          listable: hidden
+      -
+        handle: links
+        field:
+          collapse: accordion
+          sets:
+            button:
+              display: Button
+              fields:
+                -
+                  import: button
+            social_media:
+              display: 'Social Media'
+              fields:
+                -
+                  import: social_media
+            image_link:
+              display: 'Image Link'
+              fields:
+                -
+                  handle: image
+                  field:
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Image
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    validate:
+                      - required
+                -
+                  handle: aria_label
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Aria Label'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    validate:
+                      - required
+                -
+                  handle: link
+                  field:
+                    display: Link
+                    type: link
+                    icon: link
+                    listable: hidden
+                    validate:
+                      - required
+          display: Links
+          type: replicator
+          icon: replicator
+          listable: hidden
+          if:
+            show_links: 'equals true'
+  footer:
+    display: Footer
+    fields:
+      -
+        handle: has_menu
+        field:
+          default: false
+          display: 'Has Menu'
+          type: toggle
+          icon: toggle
+          instructions: 'Toggle this to display mega menu in the footer.'
+          width: 50
+          listable: hidden
+      -
+        handle: footer_menu_section
+        field:
+          display: 'Footer Menu'
+          type: section
+          icon: section
+          listable: hidden
+          if:
+            has_menu: 'equals true'
+      -
+        handle: footer_menu
+        field:
+          max_items: 1
+          mode: select
+          display: 'Footer Menu'
+          type: structures
+          icon: structures
+          listable: hidden
+          if:
+            has_menu: 'equals true'
+          validate:
+            - 'required_if:footer_menu,true'
+      -
+        handle: custom_column
+        field:
+          default: false
+          display: 'Custom Column'
+          type: toggle
+          icon: toggle
+          instructions: 'Toggle this to display custom column in the menu, you can use this column to add sets like logo, text or social media.'
+          width: 50
+          listable: hidden
+          if:
+            has_menu: 'equals true'
+      -
+        handle: span_column
+        field:
+          display: 'Span Column'
+          type: toggle
+          icon: toggle
+          instructions: 'Toggle this to span the column, useful if you have fewer footer menu items.'
+          width: 50
+          listable: hidden
+          if:
+            has_menu: 'equals true'
+            custom_column: 'equals true'
+      -
+        handle: footer_column
+        field:
+          collapse: accordion
+          sets:
+            copyright:
+              display: Text
+              fields:
+                -
+                  handle: rich_text
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - anchor
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: true
+                    link_noreferrer: true
+                    target_blank: true
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    display: 'Rich Text'
+                    type: bard
+                    icon: bard
+                    listable: hidden
+            image:
+              display: Image
+              fields:
+                -
+                  handle: image
+                  field:
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Image
+                    type: assets
+                    icon: assets
+                    listable: hidden
+            social_media:
+              display: 'Social Media'
+              fields:
+                -
+                  import: social_media
+          display: 'Footer Column'
+          type: replicator
+          icon: replicator
+          instructions: 'Add Image, Text or Social Media to the custom column. Will be displayed first.'
+          listable: hidden
+          validate:
+            - 'required_if:custom_column,true'
+          if:
+            has_menu: 'equals true'
+            custom_column: 'equals true'
+          max_sets: 3
+      -
+        handle: logo_overlay
+        field:
+          display: 'Logo Overlay'
+          type: toggle
+          icon: toggle
+          instructions: 'Enable this to display Logo Overlay in Footer Menu'
+          width: 50
+          listable: hidden
+          if:
+            has_menu: 'equals true'
+      -
+        handle: logo_overlay_position
+        field:
+          options:
+            left: Left
+            right: Right
+          default: left
+          display: 'Logo Overlay Position'
+          type: button_group
+          icon: button_group
+          width: 50
+          listable: hidden
+          if:
+            logo_overlay: 'equals true'
+      -
+        handle: footer_copyright
+        field:
+          display: 'Footer Copyright'
+          type: section
+          icon: section
+          listable: hidden
+      -
+        handle: display_divider
+        field:
+          default: false
+          display: 'Display Divider'
+          type: toggle
+          icon: toggle
+          instructions: 'Toggle this to show divider in top of the footer'
+          width: 50
+          listable: hidden
+      -
+        handle: divider_style
+        field:
+          options:
+            contained: Contained
+            full: Full
+            logo: 'Logo Divider'
+          default: full
+          display: 'Divider Style'
+          type: button_group
+          icon: button_group
+          width: 50
+          listable: hidden
+          if:
+            display_divider: 'equals true'
+      -
+        handle: footer_items
+        field:
+          collapse: accordion
+          sets:
+            copyright:
+              display: Copyright
+              fields:
+                -
+                  handle: align
+                  field:
+                    options:
+                      left: Left
+                      center: Center
+                      right: Right
+                    default: center
+                    display: Align
+                    type: button_group
+                    icon: button_group
+                    instructions: 'Align this item inside the container'
+                    listable: hidden
+                -
+                  handle: rich_text
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - anchor
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: true
+                    link_noreferrer: true
+                    target_blank: true
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    display: 'Rich Text'
+                    type: bard
+                    icon: bard
+                    listable: hidden
+            image:
+              display: Image
+              fields:
+                -
+                  handle: align
+                  field:
+                    options:
+                      left: Left
+                      center: Center
+                      right: Right
+                    default: center
+                    display: Align
+                    type: button_group
+                    icon: button_group
+                    instructions: 'Align this item inside the container'
+                    listable: hidden
+                    width: 50
+                -
+                  handle: image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: Image
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    width: 50
+            social_media:
+              display: 'Social Media'
+              fields:
+                -
+                  handle: align
+                  field:
+                    options:
+                      left: Left
+                      center: Center
+                      right: Right
+                    default: center
+                    display: Align
+                    type: button_group
+                    icon: button_group
+                    instructions: 'Align this item inside the container'
+                    listable: hidden
+                -
+                  import: social_media
+            menu:
+              display: Menu
+              fields:
+                -
+                  handle: align
+                  field:
+                    options:
+                      left: Left
+                      center: Center
+                      right: Right
+                    default: center
+                    display: Align
+                    type: button_group
+                    icon: button_group
+                    instructions: 'Align this item inside the container'
+                    listable: hidden
+                -
+                  handle: structure
+                  field:
+                    max_items: 1
+                    mode: select
+                    display: Structure
+                    type: structures
+                    icon: structures
+                    listable: hidden
+          display: 'Footer Items'
+          type: replicator
+          icon: replicator
+          instructions: 'Here you can add the logo, copyright text, social media etc.'
+          listable: hidden
+          max_sets: 3
+  favicon:
+    display: Favicon
+    fields:
+      -
+        handle: favicon
+        field:
+          mode: list
+          container: assets
+          folder: favicons
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Favicon
+          type: assets
+          icon: assets
+          instructions: 'Ico file for favicon'
+          listable: hidden
+      -
+        handle: favicon_256
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 256'
+          type: assets
+          icon: assets
+          instructions: 'PNG Format preffered, 256x256'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_192
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 192'
+          type: assets
+          icon: assets
+          instructions: 'PNG Format preffered, 192x192'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_180
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 180'
+          type: assets
+          icon: assets
+          instructions: 'Apple Touch Icon, PNG Format preffered, 180x180'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_32
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 32'
+          type: assets
+          icon: assets
+          instructions: 'Icon, PNG Format preffered, 32x32'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+      -
+        handle: favicon_16
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Favicon 16'
+          type: assets
+          icon: assets
+          instructions: 'Icon, PNG Format preffered, 16x16'
+          listable: hidden
+          container: assets
+          folder: favicons
+          max_files: 1
+          validate:
+            - image
+  404_page:
+    display: '404 Page'
+    fields:
+      -
+        handle: 404_title
+        field:
+          input_type: text
+          antlers: false
+          default: 'Page not found'
+          display: '404 Title'
+          type: text
+          icon: text
+          instructions: 'Title for 404 Page.'
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+      -
+        handle: 404_desc
+        field:
+          always_show_set_button: false
+          buttons:
+            - bold
+            - italic
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: true
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: '404 Description'
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+      -
+        handle: 404_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: '404 Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          width: 50
+      -
+        handle: 404_image_position
+        field:
+          options:
+            left: Left
+            right: Right
+          default: right
+          display: '404 Image Position'
+          type: button_group
+          icon: button_group
+          instructions: 'Default is right.'
+          listable: hidden
+          instructions_position: above
+          width: 50
+      -
+        import: button
+        prefix: '404_'
+  sitemap:
+    display: Sitemap
+    fields:
+      -
+        handle: sitemap_collections
+        field:
+          mode: select
+          display: 'Sitemap Collections'
+          type: collections
+          icon: collections
+          listable: hidden
+      -
+        handle: sitemap_change_frequency
+        field:
+          options:
+            always: Always
+            hourly: Hourly
+            daily: Daily
+            weekly: Weekly
+            monthly: Monthly
+            yearly: Yearly
+            never: Never
+          clearable: false
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          instructions: 'How often to instruct search engines to crawl.'
+          width: 50
+          default: weekly
+          listable: hidden
+          display: 'Change frequency'
+      -
+        handle: sitemap_priority
+        field:
+          type: text
+          display: Priority
+          default: 0.5
+          instructions: 'Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites, it only lets the search engines know which pages you deem most important for the crawlers.'
+          width: 50
+          listable: hidden

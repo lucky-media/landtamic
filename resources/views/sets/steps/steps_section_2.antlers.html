@@ -1,0 +1,21 @@
+<div class="container py-16">
+    {{ if title }}
+        <div class="mb-10 text-center md:text-left">
+            {{ partial:components.heading label="{title}" size="h2" }}
+        </div>
+    {{ /if }}
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {{ steps }}
+            <div class="flex flex-col">
+                {{ svg src="dotted-line" class="fill-current text-secondary-900" }}
+                <div class="max-w-xs mt-4 space-y-1">
+                    {{ partial:components.heading label="{title}" size="h6" }}
+
+                    {{ if description }}
+                        {{ partial:components.lead label="{description}" }}
+                    {{ /if }}
+                </div>
+            </div>
+        {{ /steps }}
+    </div>
+</div>

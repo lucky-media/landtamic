@@ -1,0 +1,19 @@
+{{ if align === 'left' }}
+    {{ var:menu_align value="mx-auto md:mx-0 md:mr-auto" }}
+{{ elseif align === 'right' }}
+    {{ var:menu_align value="mx-auto md:mx-0 md:ml-auto" }}
+{{ else }}
+    {{ var:menu_align value="mx-auto" }}
+{{ /if }}
+
+<ul
+    class="flex flex-col divide-y md:flex-row items-center md:divide-y-0 md:divide-x divide-gray-300 divide-opacity-50 {{ var:menu_align }}">
+    {{ nav :handle="structure" }}
+        <li class="py-2 text-center md:py-0">
+            <a href="{{ url }}"
+                class="px-2 text-sm text-gray-300 transition-all duration-300 ease-in-out hover:text-secondary-900 hover:underline">
+                {{ title  }}
+            </a>
+        </li>
+    {{ /nav }}
+</ul>

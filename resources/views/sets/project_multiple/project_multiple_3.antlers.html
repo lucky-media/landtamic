@@ -1,0 +1,35 @@
+<div class="container py-16 md:py-20">
+    {{ if title }}
+        <div class="max-w-lg mb-12">
+            {{ partial:components.heading label="{title}" size="h3" }}
+        </div>
+    {{ /if }}
+    <div class="grid grid-cols-1 gap-20 md:grid-cols-2">
+        {{ projects }}
+            <div class="pb-6 space-y-6 border-b border-gray-100">
+                {{ if title }}
+                    {{ partial:components.heading label="{title}" size="h4" }}
+                {{ /if }}
+                <div class="overflow-hidden rounded-lg max-h-96">
+                    {{
+                        partial:components/picture
+                        :image="image"
+                        cover="true"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                     }}
+                </div>
+                <div class="flex flex-col items-start justify-between md:items-center md:flex-row">
+                    {{ if description }}
+                        <p class="mb-2 font-extrabold tracking-widest text-gray-900 text-md md:mb-0">
+                            {{ description }}
+                        </p>
+                    {{ /if }}
+
+                    {{ if has_link }}
+                        {{ partial:components.button link="{link}" label="{label}" size="md" color="{button_variant}" }}
+                    {{ /if }}
+                </div>
+            </div>
+        {{ /projects }}
+    </div>
+</div>

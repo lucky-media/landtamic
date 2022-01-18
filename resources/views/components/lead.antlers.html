@@ -1,0 +1,23 @@
+---
+weights:
+  normal: 'font-normal'
+  bold: 'font-bold'
+  extra-bold: 'font-extrabold'
+  medium: 'font-medium'
+sizes:
+  sm: 'text-sm'
+  md: 'text-base'
+  lg: 'text-lg'
+types:
+  gray: 'text-gray-900'
+  medium-gray: 'text-gray-800'
+  light-gray: 'text-gray-700'
+  fair-gray: 'text-gray-100'
+  white: 'text-white'
+  brand: 'text-primary-900'
+---
+
+<p
+    class="{{ size ? view:sizes[size] : view:sizes['md'] }} {{ weight ? view:weights[weight] : view:weights['normal'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}">
+    {{ label }}
+</p>

@@ -1,0 +1,65 @@
+tree:
+  -
+    id: 87bd6474-a524-4927-97fc-3b1362d7aaed
+    title: 'Easily modify the footer'
+    children:
+      -
+        id: 296e8f64-44ad-4264-a4bd-69b1acd1254e
+        title: 'About us'
+        url: '#'
+      -
+        id: 40deb126-c846-4507-8bf3-5dee8dd332aa
+        title: Blog
+        url: '#'
+      -
+        id: 83240ffd-7262-4e54-a8fd-bf821fa56880
+        title: Careers
+        url: '#'
+      -
+        id: 50e26b1a-3b85-4828-96d6-d336eb19df3a
+        title: 'Contact Us'
+        url: '#'
+  -
+    id: efb8c85d-f6f8-418e-bca9-1c0fe60c655b
+    title: 'Multiple columns'
+    children:
+      -
+        id: f3cfa831-10fd-4b35-b3a5-e05588793ea2
+        title: 'Cookies Policy'
+        url: '#'
+      -
+        id: 668c5366-8a49-49e0-90ed-fc9d43efa970
+        title: 'Privacy Policy'
+        url: '#'
+      -
+        id: 90f73f78-97ec-466a-9538-bcf9fe366644
+        title: 'Terms of Service'
+        url: '#'
+      -
+        id: a7f6505f-8a3e-45fd-9e5b-56f62e09b656
+        title: 'Law Enforcement'
+        url: '#'
+  -
+    id: c88d9552-6511-422f-8f6a-6a1ffdd0097f
+    title: 'Reach Us'
+    data:
+      toggle_social: false
+    children:
+      -
+        id: f82612b2-889c-4e2e-a9ba-d163cefe6c23
+        title: hello@luckymedia.dev
+        data:
+          has_icon: true
+          icon: mail
+      -
+        id: 3fa46a4f-b24a-4d1f-814d-1e7ffeb93720
+        title: '+91 98765 43210'
+        data:
+          has_icon: true
+          icon: phone
+      -
+        id: 601530fe-a45f-4f5e-b999-e60561a2e3ff
+        title: '772 Lyonwood Ave Walnut, <br/> CA 91789'
+        data:
+          has_icon: true
+          icon: location

@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "mix",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "mix --production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.4.0",
+        "browser-sync": "^2.27.7",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^6.0.39",
+        "postcss": "^8.4.5",
+        "postcss-import": "^14.0.2",
+        "postcss-nested": "^5.0.6",
+        "postcss-preset-env": "^7.0.1",
+        "tailwindcss-debug-screens": "^2.2.1"
+    },
+    "dependencies": {
+        "@fontsource/manrope": "^4.5.1",
+        "@tailwindcss/typography": "^0.5.0",
+        "alpinejs": "^3.7.0",
+        "autoprefixer": "^10.4.0",
+        "tailwindcss": "^3.0.2"
+    }
+}

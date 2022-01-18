@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{# Favicon #}}
+    {{ partial:partials/favicons }}
+
+    {{# SEO Meta Tags #}}
+    {{ seotamic }}
+
+    {{# Styling Tags #}}
+    <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}" />
+
+    {{# Scripts #}}
+    <script src="{{ mix src='/js/site.js' }}" defer></script>
+</head>
+
+<body
+    class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}">
+
+    <div class="relative overflow-hidden">
+        {{# Navigation Partials #}}
+        {{ partial:layout/navigation }}
+
+        <!-- Content -->
+        {{ template_content }}
+    </div>
+    {{# Footer Partials #}}
+    {{ partial src="layout/_footer" }}
+</body>
+
+</html>

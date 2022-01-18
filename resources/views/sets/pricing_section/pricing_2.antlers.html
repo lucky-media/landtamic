@@ -1,0 +1,53 @@
+<div class="bg-gray-100">
+    <div class="container py-20">
+        <div class="flex flex-col items-center mb-20 text-center">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" class="mb-2" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+
+        <div class="grid gap-16 lg:grid-cols-3">
+            {{ prices }}
+                <div class="shadow-xl rounded-2xl self-center {{ featured ? ' bg-white border-2 border-primary-900 md:min-h-[450px] h-full p-10' : 'border border-gray-700 p-5' }}">
+                    <div class="flex flex-col items-center justify-between h-full">
+                        <div class="flex flex-col items-center">
+                            {{ partial:components.heading label="{title}" size="h4" class="mb-4" }}
+
+                            {{ if icon }}
+                                {{
+                                    partial:components/picture
+                                    :image="icon"
+                                    cover="true"
+                                    class="mb-4 max-h-16"
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                            {{ /if }}
+
+                            <div class="flex items-end">
+                                {{ if price }}
+                                    {{ partial:components.heading label="{price}" size="h4" }}
+                                {{ /if }}
+                                {{ if duration }}
+                                    {{ partial:components.lead label="{duration}" size="lg" color="light-gray" }}
+                                {{ /if }}
+                            </div>
+
+                            {{ if description }}
+                                {{ partial:components.lead label="{description}" size="lg" class="mt-8 text-center" }}
+                            {{ /if }}
+                        </div>
+
+                        {{ if toggle and label }}
+                            <div class="mt-8">
+                                {{ partial:components.button size="{button_size}"color="{button_variant ?? 'white'}" }}
+                            </div>
+                        {{ /if }}
+                    </div>
+                </div>
+            {{ /prices }}
+        </div>
+    </div>
+</div>

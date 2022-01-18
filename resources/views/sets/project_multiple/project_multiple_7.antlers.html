@@ -1,0 +1,22 @@
+<div class="container py-16 md:py-20">
+    {{ if title }}
+        {{ partial:components.lead label="{title}" size="sm" weight="extra-bold" class="mb-12 tracking-widest uppercase " }}
+    {{ /if }}
+    <div class="grid gap-8 md:grid-cols-2">
+        {{ projects }}
+            <div class="overflow-hidden h-auto max-h-[400px]">
+                <{{ has_link ? 'a' : 'span' }}
+                {{ if has_link }} href="
+                    {{ link }}"
+                {{ /if }}>
+                {{
+                        partial:components/picture
+                        :image="image"
+                        cover="true"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                    }}
+                </{{ has_link ? 'a' : 'span' }}>
+            </div>
+        {{ /projects }}
+    </div>
+</div>

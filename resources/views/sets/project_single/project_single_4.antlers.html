@@ -1,0 +1,22 @@
+<div class="container py-20">
+    <div class="relative flex flex-wrap items-center px-16 py-5 overflow-hidden rounded-lg bg-secondary-900">
+        <div class="md:pt-0 md:w-1/2 mt-14 md:mt-0">
+            {{ partial:components.heading label="{title}" color="white" size="h4" }}
+
+
+            {{ if description }}
+                {{ partial:components.lead label="{description}" color="white" size="lg" class="mt-4" }}
+            {{ /if }}
+        </div>
+        <div class="order-first w-full md:w-1/2 md:order-none">
+            {{ svg src="pattern" class="absolute top-0 right-0 mr-auto" }}
+
+            {{
+                partial:components/picture
+                :image="image"
+                class="w-full h-auto object-contain max-h-[400px] relative z-10"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

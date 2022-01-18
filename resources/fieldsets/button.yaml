@@ -1,0 +1,78 @@
+title: Button
+fields:
+  -
+    handle: toggle
+    field:
+      default: false
+      display: 'Toggle Button'
+      type: toggle
+      icon: toggle
+      instructions: 'Display Button'
+      listable: hidden
+  -
+    handle: label
+    field:
+      input_type: text
+      antlers: false
+      display: Label
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        toggle: 'equals true'
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      icon: link
+      listable: hidden
+      if:
+        toggle: 'equals true'
+  -
+    handle: button_variant
+    field:
+      options:
+        brand: Brand
+        secondary: Secondary
+        outline: Outline
+        white: White
+      default: brand
+      display: Variant
+      type: button_group
+      icon: button_group
+      instructions: 'Button variant, default brand.'
+      width: 50
+      listable: hidden
+      if:
+        toggle: 'equals true'
+      instructions_position: above
+  -
+    handle: button_size
+    field:
+      options:
+        sm: Small
+        md: Medium
+        lg: Large
+        xl: 'Extra Large'
+      default: md
+      display: 'Button Size'
+      type: button_group
+      icon: button_group
+      instructions: 'Select button size, default medium.'
+      width: 50
+      listable: hidden
+      if:
+        toggle: 'equals true'
+  -
+    handle: target_blank
+    field:
+      default: false
+      display: 'Target Blank'
+      type: toggle
+      icon: toggle
+      instructions: 'Open link in new tab or window.'
+      width: 50
+      listable: hidden
+      if:
+        toggle: 'equals true'

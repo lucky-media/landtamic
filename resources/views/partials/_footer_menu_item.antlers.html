@@ -1,0 +1,17 @@
+ <li>
+     <{{ url ? 'a' : 'p' }} class="inline-flex items-center text-base font-normal text-gray-200
+     {{ url ?= 'transition-all duration-300 ease-in-out hover:text-secondary-900 hover:underline' }}"
+     {{ if url }} href="
+         {{ url }}"
+     {{ /if }}>
+
+     {{ if has_icon }}
+         {{
+            svg src="{{ icon }}"
+         class="flex-shrink-0 w-6 h-6 mr-2 fill-current text-primary-800"
+         }}
+     {{ /if }}
+
+     {{ title }}
+     </{{ url ? 'a' : 'p' }}>
+ </li>

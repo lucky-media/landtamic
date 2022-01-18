@@ -1,0 +1,16 @@
+{{ if align === 'left' }}
+    {{ var:image_align value="mx-auto md:mx-0 md:mr-auto" }}
+{{ elseif align === 'right' }}
+    {{ var:image_align value="mx-auto md:mx-0 md:ml-auto" }}
+{{ else }}
+    {{ var:image_align value="mx-auto" }}
+{{ /if }}
+
+<div>
+    {{
+        partial:components/picture
+        class="object-contain w-full h-auto max-w-[8rem] {var:image_align}"
+        :image="image"
+        sizes="(min-width: 200px) 35vw, 90vw"
+    }}
+</div>

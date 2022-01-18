@@ -1,0 +1,14 @@
+<div class="container py-4">
+    <div class="py-6 border-t border-b border-gray-300">
+        <div class="grid grid-flow-row gap-6 md:grid-flow-col lg:gap-0">
+            {{ images }}
+                {{
+                    partial:components/picture
+                    :image="url"
+                    class="object-contain w-full h-auto max-h-12 md:max-h-16"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            {{ /images }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container py-20">
+    <div class="flex flex-col px-6 border border-gray-100 rounded-lg">
+        <div
+            class="flex flex-col items-center justify-between px-6 py-6 text-center border-b border-gray-100 md:flex-row">
+            {{ partial:components.heading label="{title}" size="h4" }}
+
+            {{ if has_link }}
+                <div class="mt-4 md:mt-0">
+                    {{ partial:components.button size="{button_size}" color="{button_variant}" radius="full" }}
+                </div>
+            {{ /if }}
+        </div>
+        <div class="p-6">
+            {{
+                partial:components/picture
+                :image="image"
+                class="w-full h-auto object-contain max-h-[650px]"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

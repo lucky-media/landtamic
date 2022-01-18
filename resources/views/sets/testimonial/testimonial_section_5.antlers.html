@@ -1,0 +1,42 @@
+<div class="py-12 bg-primary-100 md:py-20">
+    <div class="container space-y-10">
+        {{ testimonials }}
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-start px-4 bg-white rounded-lg lg:pl-8 lg:pr-16 py-11">
+                    {{ svg src="backtick" class="flex-shrink-0 w-6 mr-6 -mt-1 fill-current text-primary-900" }}
+
+                    {{ partial:components.lead label="{description}" size="lg" }}
+                </div>
+
+                <!-- Triangle -->
+                <div class="w-6 mx-auto overflow-hidden">
+                    <div class="w-6 h-4 origin-top-left transform -rotate-45 bg-white"></div>
+                </div>
+                <!-- Triangle -->
+
+                {{ if has_author }}
+                    <div class="flex flex-row items-center justify-center mt-6">
+                        {{ if image }}
+                            <div class="w-16 h-16 overflow-hidden rounded-full">
+                                {{
+                                    partial:components/picture
+                                    :image="image"
+                                    class="object-contain w-full h-auto"
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                            </div>
+                        {{ /if }}
+                        <div class="ml-4">
+                            {{ partial:components.lead label="{full_name}" weight="bold" }}
+
+
+                            {{ if position }}
+                                {{ partial:components.lead label="{position}" size="sm" color="medium-gray" }}
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /if }}
+            </div>
+        {{ /testimonials }}
+    </div>
+</div>

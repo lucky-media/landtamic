@@ -1,0 +1,20 @@
+<div class="container pt-10 md:py-16">
+    <div class="flex flex-wrap items-center mb-12 -mx-8">
+        <div class="w-full px-8 mb-2 md:max-w-lg mb:mb-0">
+            {{ partial:components.heading label="{title}" size="h3" }}
+        </div>
+        <div class="w-full px-8 md:w-1/2">
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+    </div>
+    <div class="-mx-10 overflow-hidden md:-mx-0 rounded-2xl">
+        {{
+            partial:components/picture
+            :image="image"
+            cover="true"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+</div>

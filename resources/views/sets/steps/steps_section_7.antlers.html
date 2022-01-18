@@ -1,0 +1,29 @@
+<div class="container py-16">
+    <div class="mb-10 text-center">
+        {{ if title }}
+            {{ partial:components.heading label="{title}" size="h2" }}
+        {{ /if }}
+
+        {{ if description }}
+            {{ partial:components.lead label="{description}" size="lg" }}
+        {{ /if }}
+    </div>
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {{ steps }}
+            <div class="text-center">
+                {{
+                    partial:components/picture
+                    :image="image"
+                    class="object-contain w-full h-auto max-h-16"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+
+                {{ partial:components.heading label="{title}" size="h6" class="mt-2" }}
+
+                {{ if description }}
+                    {{ partial:components.lead label="{description}" class="mt-2" }}
+                {{ /if }}
+            </div>
+        {{ /steps }}
+    </div>
+</div>

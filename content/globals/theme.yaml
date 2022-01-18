@@ -1,0 +1,235 @@
+title: Theme
+data:
+  logo_normal: images/Dark.svg
+  logo_dark: images/Light.svg
+  logo_mark: images/White.svg
+  logo_position: left
+  menu_position: left
+  show_links: true
+  links:
+    -
+      toggle: true
+      label: Login
+      link: 'https://www.google.com/'
+      button_variant: secondary
+      button_size: md
+      target_blank: false
+      type: button
+      enabled: true
+    -
+      toggle: true
+      label: Register
+      link: 'https://www.google.com/'
+      button_variant: brand
+      button_size: md
+      target_blank: false
+      type: button
+      enabled: true
+    -
+      image: apple-store.png
+      aria_label: 'Apple Store Link'
+      link: 'https://www.apple.com'
+      type: image_link
+      enabled: false
+    -
+      image: play-store.png
+      aria_label: 'Play Store'
+      link: 'https://www.google.com'
+      type: image_link
+      enabled: false
+    -
+      toggle_social: true
+      social_title: 'Social Media'
+      social:
+        -
+          title: Twitter
+          url: www.twitter.com
+          icon: social/twitter-1641400598.svg
+        -
+          title: Facebook
+          url: www.facebook.com
+          icon: social/facebook-1641400589.svg
+        -
+          title: Dribble
+          url: www.dribbble.com
+          icon: social/dribbble-1641400584.svg
+        -
+          title: Instagram
+          url: www.instagram.com
+          icon: social/Instagram-1641400598.svg
+        -
+          title: Behance
+          url: www.behance.com
+          icon: social/behance-1641400629.svg
+        -
+          title: Github
+          url: www.github.com
+          icon: social/github-1641400598.svg
+        -
+          title: Linkedin
+          url: www.linkedin.com
+          icon: social/linkedIn-1641400598.svg
+        -
+          title: Pinterest
+          url: www.pinterest.com
+          icon: social/pinterest-1641400598.svg
+        -
+          title: Youtube
+          url: www.youtube.com
+          icon: social/youtube-1641400598.svg
+      type: social_media
+      enabled: false
+  has_menu: true
+  footer_menu: footer_nav
+  custom_column: true
+  span_column: false
+  footer_column:
+    -
+      image: images/Light.svg
+      type: image
+      enabled: true
+    -
+      rich_text:
+        -
+          type: paragraph
+          content:
+            -
+              type: text
+              text: "Copyright © 2022 Landtamic UI Kit. Made with ❤️ by\_"
+            -
+              type: text
+              marks:
+                -
+                  type: link
+                  attrs:
+                    href: 'https://www.luckymedia.dev/'
+                    rel: 'noopener noreferrer'
+                    target: _blank
+                    title: null
+              text: 'Lucky Media'
+      type: copyright
+      enabled: true
+    -
+      toggle_social: true
+      social_media:
+        -
+          icon: twitter
+          url: 'https://www.twitter.com'
+          type: social_media
+          enabled: true
+        -
+          icon: instagram
+          url: 'https://www.instagram.com'
+          type: social_media
+          enabled: true
+        -
+          icon: facebook
+          url: 'https://www.facebook.com'
+          type: social_media
+          enabled: true
+        -
+          icon: linkedin
+          url: 'https://www.linkedin.com'
+          type: social_media
+          enabled: true
+      type: social_media
+      enabled: true
+      social:
+        -
+          title: Twitter
+          url: www.twitter.com
+          icon: social/twitter-1641400598.svg
+        -
+          title: Github
+          url: www.github.com
+          icon: social/github-1641400598.svg
+        -
+          title: Youtube
+          url: www.youtube.com
+          icon: social/youtube-1641400598.svg
+  logo_overlay: true
+  logo_overlay_position: right
+  display_divider: true
+  divider_style: logo
+  footer_items:
+    -
+      rich_text:
+        -
+          type: paragraph
+          content:
+            -
+              type: text
+              text: 'Copyright © 2022 Landtamic UI Kit. Made with ❤️  by '
+            -
+              type: text
+              marks:
+                -
+                  type: link
+                  attrs:
+                    href: 'https://www.luckymedia.dev/'
+                    rel: 'noopener noreferrer'
+                    target: _blank
+                    title: null
+              text: 'Lucky Media'
+      type: copyright
+      enabled: true
+      align: left
+    -
+      image: images/Light.svg
+      type: image
+      enabled: true
+      align: center
+    -
+      structure: footer_nav
+      type: menu
+      enabled: true
+      align: right
+  favicon: favicons/favicon.ico
+  favicon_256: favicons/apple-touch-icon.png
+  favicon_192: favicons/android-chrome-192x192.png
+  favicon_180: favicons/apple-touch-icon.png
+  favicon_32: favicons/favicon-32x32.png
+  favicon_16: favicons/favicon-16x16.png
+  404_title: 'Page not found'
+  404_desc:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'The page you were looking for doesn’t '
+        -
+          type: text
+          marks:
+            -
+              type: bold
+          text: exist
+        -
+          type: text
+          text: '. You may have mistyped the address or the page may have '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://www.google.com/'
+                rel: 'noopener noreferrer'
+                target: null
+                title: ''
+          text: moved
+        -
+          type: text
+          text: .
+  404_image: images/outer_space.png
+  404_image_position: right
+  404_toggle: true
+  404_label: 'Go Back'
+  404_link: /
+  404_button_variant: brand
+  404_button_size: xl
+  404_target_blank: false
+  sitemap_collections:
+    - pages
+  sitemap_change_frequency: weekly
+  sitemap_priority: 0.5

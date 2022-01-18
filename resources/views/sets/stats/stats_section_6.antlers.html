@@ -1,0 +1,39 @@
+<div class="container py-12 md:py-20">
+    <div class="flex flex-wrap">
+        <div class="w-full text-center lg:w-1/2 lg:text-left">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" class="mb-2 xl:max-w-sm" }}
+            {{ /if }}
+
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" }}
+            {{ /if }}
+        </div>
+        <div class="w-full mt-8 lg:mt-0 lg:w-1/2">
+            <div class="grid gap-12 sm:grid-cols-2 lg:gap-8">
+                {{ stats }}
+                    <div class="flex flex-row items-center">
+                        {{ if has_icon }}
+                            <div class="flex-shrink-0 mr-6">
+                                {{
+                                partial:components/picture
+                                :image="icon"
+                                class="mb-4 max-h-10"
+                                cover="true"
+                                sizes="(min-width: 200px) 35vw, 90vw"
+                            }}
+                            </div>
+                        {{ /if }}
+                        <div class="flex flex-col">
+                            {{ partial:components.heading label="{number}" size="h4" }}
+
+                            {{ if description }}
+                                {{ partial:components.lead label="{description}" size="lg" }}
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /stats }}
+            </div>
+        </div>
+    </div>
+</div>

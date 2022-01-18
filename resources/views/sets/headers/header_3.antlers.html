@@ -1,0 +1,9 @@
+<div class="py-10 bg-primary-900">
+    <div class="container">
+        {{ if has_subtitle }}
+            {{ partial:components/lead label="{subtitle}" class="uppercase" size="sm" color="white" }}
+        {{ /if }}
+
+        {{ partial:components/heading label="{title}" size="h2" color="white" }}
+    </div>
+</div>

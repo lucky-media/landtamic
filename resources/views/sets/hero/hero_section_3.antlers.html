@@ -1,0 +1,44 @@
+<div class="relative w-full py-20 overflow-hidden">
+    <!-- Desktop Background Image -->
+    <div class="absolute top-0 left-0 hidden w-full h-full object-fit md:block" style="z-index: -1;">
+        {{
+            partial:components/picture
+            image="/assets/images/hero-3-bg-d.png"
+            class="object-cover w-full h-full"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+
+    <div class="absolute left-0 block object-cover w-full h-full -mt-56 md:hidden" style="z-index: -1;">
+        {{
+            partial:components/picture
+            image="/assets/images/hero-3-bg-mb.png"
+            class="object-cover w-full h-full"
+            sizes="(min-width: 200px) 35vw, 90vw"
+        }}
+    </div>
+
+    <div class="container">
+        <div class="flex flex-wrap justify-center md:justify-start">
+            <div class="flex flex-col items-center mb-24 text-center md:items-start md:text-left md:w-1/2 md:mb-0">
+                <div class="w-full max-w-xl mb-8">
+                    {{ partial:components.heading label="{title}" size="h1" }}
+                    {{ if has_description }}
+                        {{ partial:components.lead label="{description}" size="lg" class="mt-8" }}
+                    {{ /if }}
+                </div>
+                {{ if toggle and label }}
+                    {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                {{ /if }}
+            </div>
+            <div class="w-full md:w-1/2">
+                {{
+                    partial:components/picture
+                    :image="hero_image"
+                    class="object-contain w-full h-auto mx-auto max-h-[640px]"
+                    sizes="(min-width: 200px) 35vw, 90vw"
+                }}
+            </div>
+        </div>
+    </div>
+</div>

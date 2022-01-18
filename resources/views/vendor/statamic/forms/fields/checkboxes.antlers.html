@@ -1,0 +1,15 @@
+{{ foreach:options as="value|label" }}
+    <div class="flex {{ inline ? 'space-x-4' : 'flex-col space-y-4' }}">
+        <label class="inline-flex items-center">
+            <input class="mr-3 rounded focus:outline-none text-primary-900 focus:ring-2 focus:ring-primary-900 focus:ring-opacity-50"
+            type="checkbox" name="{{ handle }}[]"
+                value="{{ value }}"
+                {{ if (old | in_array:value) }} checked {{ /if }}
+                {{ if validate|contains:required }} required{{ /if }}>
+            <span class="text-gray-800">{{ label }}</span>
+        </label>
+        {{ unless inline }}
+            <br>
+        {{ /unless }}
+    </div>
+{{ /foreach:options }}

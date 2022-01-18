@@ -1,0 +1,48 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden
+          placeholder: Name
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          placeholder: Email
+          validate:
+            - required
+            - email
+      -
+        handle: message
+        field:
+          antlers: false
+          display: Message
+          type: textarea
+          icon: textarea
+          listable: hidden
+          placeholder: Message
+      -
+        handle: terms
+        field:
+          inline: true
+          options:
+            accept: 'Accept Terms and Conditions'
+          display: Terms
+          type: checkboxes
+          icon: checkboxes
+          listable: hidden

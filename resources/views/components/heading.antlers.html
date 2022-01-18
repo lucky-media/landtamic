@@ -1,0 +1,17 @@
+---
+sizes:
+    h1: 'xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-extrabold'
+    h2: 'lg:text-5xl md:text-4xl text-3xl font-extrabold'
+    h3: 'md:text-4xl text-3xl font-extrabold'
+    h4: 'md:text-3xl text-2xl font-extrabold'
+    h5: 'md:text-2xl text-xl font-semibold'
+    h6: 'md:text-xl text-lg font-bold'
+types:
+    gray: 'text-gray-900'
+    light-gray: 'text-gray-100'
+    white: 'text-white'
+---
+
+<{{ size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}">
+{{ label }}
+</{{ size or 'p' }}>

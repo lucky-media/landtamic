@@ -1,0 +1,47 @@
+<div class="flex flex-wrap bg-primary-100">
+    <div class="w-full md:w-1/2 bg-primary-900">
+        <div class="max-w-md py-24 md:pl-5 md:pr-24 md:py-64 lg:ml-auto">
+            {{ if title }}
+                {{ partial:components.heading label="{title}" size="h2" color="white" }}
+            {{ /if }}
+
+            {{ if description }}
+                {{ partial:components.lead label="{description}" size="lg" color="white" class="max-w-sm" }}
+            {{ /if }}
+        </div>
+    </div>
+    <div class="flex items-center justify-center w-full md:w-1/2 md:justify-start">
+        <div class="max-w-xl my-auto">
+            <div class="flex flex-col p-10 bg-white">
+                {{ svg src="md-backtick" class="mb-6 ml-auto transform rotate-180 fill-current opacity-30 text-primary-900" }}
+
+                {{ testimonials }}
+                    {{ if has_author }}
+                        <div class="flex flex-row items-center">
+                            {{ if image }}
+                                <div class="overflow-hidden rounded-full w-14 h-14">
+                                    {{
+                                    partial:components/picture
+                                    :image="image"
+                                    class="object-contain w-full h-auto"
+                                    sizes="(min-width: 200px) 35vw, 90vw"
+                                }}
+                                </div>
+                            {{ /if }}
+                            <div class="ml-4">
+                                {{ partial:components.lead label="{full_name}" weight="bold" }}
+
+                                {{ if position }}
+                                    {{ partial:components.lead label="{position}" size="sm" color="medium-gray" }}
+                                {{ /if }}
+                            </div>
+                        </div>
+                    {{ /if  }}
+                    <div class="mt-6">
+                        {{ partial:components.lead label="{description}" size="lg" }}
+                    </div>
+                {{ /testimonials }}
+            </div>
+        </div>
+    </div>
+</div>

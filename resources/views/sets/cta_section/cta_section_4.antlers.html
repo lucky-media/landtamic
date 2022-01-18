@@ -1,0 +1,24 @@
+<div class="container py-16">
+    <div class="flex flex-wrap overflow-hidden bg-primary-900 rounded-2xl">
+        <div class="p-5 mb-12 xl:p-12 lg:w-4/6 md:w-1/2 md:mb-0">
+            <div class="max-w-xl text-center md:text-left">
+                {{ partial:components.heading label="{title}" color="white" size="h3" }}
+            </div>
+
+            {{ if toggle and label }}
+                <div class="mt-8 text-center md:text-left">
+                    {{ partial:components.button size="{button_size}" color="{button_variant}" }}
+                </div>
+            {{ /if }}
+        </div>
+        <div class="w-full lg:w-2/6 md:w-1/2">
+            {{
+                partial:components/picture
+                :image="image"
+                class="md:max-h-80"
+                cover="true"
+                sizes="(min-width: 200px) 35vw, 90vw"
+            }}
+        </div>
+    </div>
+</div>

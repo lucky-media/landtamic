@@ -74,12 +74,12 @@ For demo purposes we included images from [unDraw](https://undraw.co/) and [Free
 ### Globals
 We have grouped the globals into 'Theme' where you can modify the content to fit your needs:
 
-#### General
+**General**
   * Logo Normal - Normal light version of the logo (preferably SVG).
   * Logo Dark - Dark version of the logo (preferably SVG).
   * Logo Mark - Used as a divider or overlay in footers, it is recommended here to upload a short version of the logo ( preferably SVG ).
 
-#### Menu
+**Menu**
   * Logo Position - Should the logo be displayed in the left side or center.
   * Menu Position - Select the position of the menu items, right side is default but you can also set it to left or center.
   * Show Links - In this section you can add different links that will be display along the Logo and Menu. The position of these items will depend on the alignment of the logo/menu
@@ -87,8 +87,8 @@ We have grouped the globals into 'Theme' where you can modify the content to fit
      * Image Link: Add an image to act as a Button in the header, common examples links to Apple Store / Play Store, podcasts etc.
      * Social Media: Toggle this to enable social media links in the header.
 
-#### Footer - is completely customized based on the options that you select.
-  * Has Menu - If enabled, you will have the option to select a menu for the Footer. We have already included an example menu footer so you can have an idea on how it works.
+**Footer** - is completely customized based on the options that you select.
+  * Menu - If enabled, you will have the option to select a menu for the Footer. We have already included an example menu footer so you can have an idea on how it works.
   * Custom Columns - If you want to add a custom column to the Menu, here you have the ability to have 3 sets:
      * Image - Can be used to upload the brand logo.
      * Text - Can be used as a copyright text or any other disclaimers that you might have.
@@ -98,16 +98,16 @@ We have grouped the globals into 'Theme' where you can modify the content to fit
      * Footer Divider - Divider is useful when you have the footer menu enabled and you want to distinguish the small footer with the footer menu. Here you have 3 options: Contained ( inside the container ), Full Width and Logo Divider.
      * Footer Items: A replicator field to add / remove footer items based on your preference. Copyright - To add a copyright text. Image - If you want an image / preferably logo to be displayed in the footer. Menu - Suitable to display a small horizontal menu in the footer for small websites / landing pages. 
 
-#### Favicon
+**Favicon**
 We have created all the required favicon versions, but with our Landtamic logo. Feel free to add your own. The favicon's were generated using [Real Favicon Generator](https://realfavicongenerator.net/), note that you don't need to include `site.webmanifest` as we generate this on the fly with Statamic.
 
-#### 404 Page - Configure the default settings for the `404` Page:
+**404 Page** - Configure the default settings for the `404` Page:
   * 404 Title - Set the Title
   * 404 Description - Description used under the title.
   * 404 Image - We have included a default image, which can be aligned to either left or right side.
   * 404 Button - Optionally include a button which will send the user to a different page.
 
-#### Sitemap
+**Sitemap**
   * Sitemap collections - Choose which collection should be included in your sitemap (default is set for Pages and Posts).
   * Change Frequency - How often do you want to instruct search engines to crawl?
   * Priority - It lets the search engines know which pages you deem most important for the crawlers.

@@ -351,6 +351,7 @@ sections:
                   handle: image
                   field:
                     mode: grid
+                    container: assets
                     restrict: false
                     allow_uploads: true
                     display: Image
@@ -622,6 +623,7 @@ sections:
                             handle: image
                             field:
                               mode: grid
+                              container: assets
                               restrict: false
                               allow_uploads: true
                               max_files: 1
@@ -687,6 +689,7 @@ sections:
                     allow_uploads: true
                     display: Image
                     type: assets
+                    container: assets
                     icon: assets
                     listable: hidden
                     max_files: 1
@@ -837,6 +840,7 @@ sections:
                   handle: image
                   field:
                     mode: grid
+                    container: assets
                     restrict: false
                     allow_uploads: true
                     display: Image
@@ -872,6 +876,7 @@ sections:
                             handle: image
                             field:
                               mode: grid
+                              container: assets
                               restrict: false
                               allow_uploads: true
                               display: Image
@@ -1122,6 +1127,7 @@ sections:
                   handle: image
                   field:
                     mode: list
+                    container: assets
                     restrict: false
                     allow_uploads: true
                     show_filename: true

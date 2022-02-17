@@ -20,6 +20,7 @@ sections:
         handle: logo_dark
         field:
           mode: grid
+          container: assets
           restrict: false
           allow_uploads: true
           display: 'Logo Dark'
@@ -33,6 +34,7 @@ sections:
         handle: logo_mark
         field:
           mode: grid
+          container: assets
           restrict: false
           allow_uploads: true
           show_filename: true
@@ -592,6 +594,7 @@ sections:
         handle: 404_image
         field:
           mode: grid
+          container: assets
           restrict: false
           allow_uploads: true
           show_filename: true

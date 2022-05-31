@@ -1,0 +1,46 @@
+title: 'CTA Section'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        cta_section_1: 'Variant 1'
+        cta_section_2: 'Variant 2'
+        cta_section_3: 'Variant 3'
+        cta_section_4: 'Variant 4'
+        cta_section_5: 'Variant 5'
+        cta_section_6: 'Variant 6'
+        cta_section_7: 'Variant 7'
+      display: 'CTA Section'
+      default: cta_section_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a CTA variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: image
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    import: button

@@ -1,0 +1,95 @@
+title: 'Feature Multiple'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        feature_multiple_1: 'Variant 1'
+        feature_multiple_2: 'Variant 2'
+        feature_multiple_3: 'Variant 3'
+        feature_multiple_4: 'Variant 4'
+        feature_multiple_5: 'Variant 5'
+        feature_multiple_6: 'Variant 6'
+        feature_multiple_7: 'Variant 7'
+        feature_multiple_8: 'Variant 8'
+      display: 'Feature Variant'
+      default: feature_multiple_1
+      type: button_group
+      icon: button_group
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: feature_image
+    field:
+      mode: grid
+      container: assets
+      max_files: 1
+      restrict: false
+      allow_uploads: true
+      display: 'Feature image'
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: features
+    field:
+      collapse: false
+      sets:
+        card:
+          display: Card
+          fields:
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: description
+              field:
+                antlers: false
+                display: Description
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              import: small_link
+      display: Features
+      type: replicator
+      icon: replicator
+      listable: hidden

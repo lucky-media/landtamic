@@ -1,0 +1,87 @@
+title: Page Builder
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: accordion
+      sets:
+        cta_section:
+          display: 'CTA Section'
+          fields:
+            -
+              import: cta_section
+        contact_section:
+          display: 'contact_section'
+          fields:
+            -
+              import: contact_section
+        feature_multiple:
+          display: 'Feature Multiple'
+          fields:
+            -
+              import: feature_multiple
+        feature_single:
+          display: 'Feature Single'
+          fields:
+            -
+              import: feature_single
+        hero:
+          display: 'Hero'
+          fields:
+            -
+              import: hero
+        logo_cloud:
+          display: 'Logo Cloud'
+          fields:
+            -
+              import: logo_cloud
+        pricing_section:
+          display: 'Pricing Section'
+          fields:
+            -
+              import: pricing_section
+        project_multiple:
+          display: 'Project Multiple'
+          fields:
+            -
+              import: project_multiple
+        project_single:
+          display: 'Project Single'
+          fields:
+            -
+              import: project_single
+        small_link:
+          display: 'Small Link'
+          fields:
+            -
+              import: small_link
+        social_media:
+          display: 'Social Media'
+          fields:
+            -
+              import: social_media
+        stats:
+          display: 'Stats'
+          fields:
+            -
+              import: stats
+        steps:
+          display: 'Steps'
+          fields:
+            -
+              import: steps
+        team_section:
+          display: 'Team Section'
+          fields:
+            -
+              import: team_section
+        testimonial:
+          display: 'Testimonial'
+          fields:
+            -
+              import: testimonial
+      display: Blocks
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above

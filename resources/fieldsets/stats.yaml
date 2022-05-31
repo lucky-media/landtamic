@@ -1,0 +1,101 @@
+title: Stats
+fields:
+  -
+    handle: version
+    field:
+      options:
+        stats_section_1: 'Variant 1'
+        stats_section_2: 'Variant 2'
+        stats_section_3: 'Variant 3'
+        stats_section_4: 'Variant 4'
+        stats_section_5: 'Variant 5'
+        stats_section_6: 'Variant 6'
+        stats_section_7: 'Variant 7'
+      display: Variant
+      default: stats_section_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a stats variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: stats
+    field:
+      collapse: accordion
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: number
+              field:
+                input_type: text
+                antlers: false
+                display: Number
+                type: text
+                icon: text
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: description
+              field:
+                input_type: text
+                antlers: false
+                display: Description
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: has_icon
+              field:
+                default: false
+                display: 'Has Icon'
+                type: toggle
+                icon: toggle
+                width: 50
+                listable: hidden
+                instructions_position: above
+            -
+              handle: icon
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Icon
+                type: assets
+                icon: assets
+                listable: hidden
+                width: 50
+                show_filename: true
+                validate:
+                  - 'required_if:has_icon,true'
+                if:
+                  has_icon: 'equals true'
+      display: Stats
+      type: replicator
+      icon: replicator
+      listable: hidden
+      validate:
+        - required
+      instructions_position: above

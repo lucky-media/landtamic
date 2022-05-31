@@ -76,10 +76,11 @@ sections:
       -
         handle: show_links
         field:
-          default: false
           display: 'Show Links'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Enable this to display links in the right side of the menu.'
           listable: hidden
       -
@@ -147,10 +148,11 @@ sections:
       -
         handle: has_menu
         field:
-          default: false
           display: 'Has Menu'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Toggle this to display mega menu in the footer.'
           width: 50
           listable: hidden
@@ -179,10 +181,11 @@ sections:
       -
         handle: custom_column
         field:
-          default: false
           display: 'Custom Column'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Toggle this to display custom column in the menu, you can use this column to add sets like logo, text or social media.'
           width: 50
           listable: hidden
@@ -194,6 +197,8 @@ sections:
           display: 'Span Column'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Toggle this to span the column, useful if you have fewer footer menu items.'
           width: 50
           listable: hidden
@@ -270,6 +275,8 @@ sections:
           display: 'Logo Overlay'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Enable this to display Logo Overlay in Footer Menu'
           width: 50
           listable: hidden
@@ -303,6 +310,8 @@ sections:
           display: 'Display Divider'
           type: toggle
           icon: toggle
+          instructions_position: above
+          read_only: false
           instructions: 'Toggle this to show divider in top of the footer'
           width: 50
           listable: hidden
@@ -553,7 +562,7 @@ sections:
     display: '404 Page'
     fields:
       -
-        handle: 404_title
+        handle: page_title
         field:
           input_type: text
           antlers: false
@@ -567,7 +576,7 @@ sections:
           validate:
             - required
       -
-        handle: 404_desc
+        handle: page_desc
         field:
           always_show_set_button: false
           buttons:
@@ -581,7 +590,7 @@ sections:
           target_blank: false
           reading_time: false
           fullscreen: true
-          allow_source: true
+          allow_source: false
           enable_input_rules: true
           enable_paste_rules: true
           antlers: false
@@ -590,8 +599,10 @@ sections:
           icon: bard
           listable: hidden
           instructions_position: above
+          read_only: false
+          container: assets
       -
-        handle: 404_image
+        handle: page_image
         field:
           mode: grid
           container: assets
@@ -606,7 +617,7 @@ sections:
           instructions_position: above
           width: 50
       -
-        handle: 404_image_position
+        handle: page_image_position
         field:
           options:
             left: Left
@@ -621,7 +632,7 @@ sections:
           width: 50
       -
         import: button
-        prefix: '404_'
+        prefix: 'page_'
   sitemap:
     display: Sitemap
     fields:

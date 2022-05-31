@@ -1,0 +1,55 @@
+title: 'Feature Single'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        feature_single_1: 'Variant 1'
+        feature_single_2: 'Variant 2'
+        feature_single_3: 'Variant 3'
+        feature_single_4: 'Variant 4'
+        feature_single_5: 'Variant 5'
+        feature_single_6: 'Variant 6'
+        feature_single_7: 'Variant 7'
+      display: 'Feature Variant'
+      default: feature_single_1
+      type: button_group
+      icon: button_group
+      listable: hidden
+      validate:
+        - required
+      instructions_position: above
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: image
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
+      show_filename: true
+      max_files: 1
+  -
+    import: button

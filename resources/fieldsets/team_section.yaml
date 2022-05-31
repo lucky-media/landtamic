@@ -1,0 +1,91 @@
+title: 'Team Section'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        team_section_1: 'Variant 1'
+        team_section_2: 'Variant 2'
+        team_section_3: 'Variant 3'
+        team_section_4: 'Variant 4'
+        team_section_5: 'Variant 5'
+      display: 'Team Variant'
+      default: team_section_1
+      type: button_group
+      icon: button_group
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: members
+    field:
+      collapse: false
+      sets:
+        set:
+          display: Set
+          fields:
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                instructions: 'Member image'
+                listable: hidden
+            -
+              handle: full_name
+              field:
+                input_type: text
+                antlers: false
+                display: 'Full Name'
+                type: text
+                icon: text
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: position
+              field:
+                input_type: text
+                antlers: false
+                display: Position
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: biography
+              field:
+                antlers: false
+                display: Biography
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              import: social_media
+      display: Members
+      type: replicator
+      icon: replicator
+      listable: hidden

@@ -1,0 +1,90 @@
+title: Steps
+fields:
+  -
+    handle: version
+    field:
+      options:
+        steps_section_1: 'Variant 1'
+        steps_section_2: 'Variant 2'
+        steps_section_3: 'Variant 3'
+        steps_section_4: 'Variant 4'
+        steps_section_5: 'Variant 5'
+        steps_section_6: 'Variant 6'
+        steps_section_7: 'Variant 7'
+      display: 'Step Variant'
+      default: steps_section_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a step variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: image
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
+  -
+    handle: steps
+    field:
+      collapse: accordion
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: description
+              field:
+                antlers: false
+                display: Description
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                max_files: 1
+      display: Steps
+      type: replicator
+      icon: replicator
+      listable: hidden

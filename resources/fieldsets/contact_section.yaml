@@ -1,0 +1,166 @@
+title: 'Contact Section'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        contact_1: 'Variant 1'
+        contact_2: 'Variant 2'
+        contact_3: 'Variant 3'
+      default: contact_1
+      display: 'Contact Variant'
+      type: button_group
+      icon: button_group
+      listable: hidden
+  -
+    handle: image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
+      max_files: 1
+      if:
+        version: 'contains_any contact_2, contact_3'
+  -
+    handle: enable_location
+    field:
+      default: false
+      display: 'Enable Location'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
+    handle: location_section
+    field:
+      display: 'Location Section'
+      type: section
+      icon: section
+      listable: hidden
+      if:
+        enable_location: 'equals true'
+  -
+    handle: location_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Location Title'
+      type: text
+      icon: text
+      listable: hidden
+      validate:
+        - 'required_if:enable_location,true'
+      if:
+        enable_location: 'equals true'
+  -
+    handle: location_subtitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'Location Subtitle'
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        enable_location: 'equals true'
+  -
+    handle: locations
+    field:
+      collapse: accordion
+      sets:
+        new_location:
+          display: 'New Location'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                validate:
+                  - required
+            -
+              handle: rich_text
+              field:
+                always_show_set_button: false
+                buttons:
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - anchor
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: true
+                link_noreferrer: true
+                target_blank: true
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                display: 'Rich Text'
+                type: bard
+                icon: bard
+                listable: hidden
+      display: Locations
+      type: replicator
+      icon: replicator
+      listable: hidden
+      validate:
+        - 'required_if:enable_location,true'
+      if:
+        enable_location: 'equals true'
+  -
+    handle: enable_form
+    field:
+      default: false
+      display: 'Enable Form'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
+    handle: form_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Form Title'
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        enable_form: 'equals true'
+      validate:
+        - 'required_if:enable_form,true'
+  -
+    handle: form_subtitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'Form Subtitle'
+      type: text
+      icon: text
+      listable: hidden
+      if:
+        enable_form: 'equals true'
+  -
+    handle: contact_form
+    field:
+      max_items: 1
+      display: 'Contact Form'
+      type: form
+      icon: form
+      listable: hidden
+      validate:
+        - 'required_if:enable_form,true'
+      if:
+        enable_form: 'equals true'

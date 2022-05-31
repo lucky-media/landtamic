@@ -1,0 +1,54 @@
+title: 'Project Single'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        project_single_1: 'Variant 1'
+        project_single_2: 'Variant 2'
+        project_single_3: 'Variant 3'
+        project_single_4: 'Variant 4'
+        project_single_5: 'Variant 5'
+        project_single_6: 'Variant 6'
+        project_single_7: 'Variant 7'
+      display: 'Project Single Variant'
+      default: project_single_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a single project variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      display: Image
+      type: assets
+      container: assets
+      icon: assets
+      listable: hidden
+      max_files: 1
+  -
+    import: small_link

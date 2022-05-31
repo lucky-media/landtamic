@@ -1,32 +1,33 @@
 <div class="container py-10 md:py-32">
     <div class="flex flex-wrap items-center -mx-4">
         <div class="flex flex-col px-4 md:w-1/2">
-            {{ partial:components.heading label="{theme:404_title}" size="h2" }}
+            {{ partial:components.heading :label="theme:page_title" size="h2" }}
 
-            {{ if theme:404_desc }}
-                <div class="max-w-lg mt-4 prose prose-lg prose-p:text-gray-900 prose-a:text-secondary-900">
-                    {{ theme:404_desc }}
-                </div>
+                {{ if theme:page_desc }}
+                    <div class="max-w-lg mt-4 prose prose-lg prose-p:text-gray-900 prose-a:text-secondary-900">
+                        {{ theme:page_desc }}
+                    </div>
+                {{ /if }}
 
-                {{ if theme:404_toggle and theme:404_label }}
+                {{ if theme:page_toggle and theme:page_label }}
                     <div class="mt-4">
                         {{
                             partial:components.button
-                            link="{theme:404_link ?? '/'}"
-                            color="{theme:404_button_variant ?? 'brand'}"
-                            size="{theme:404_button_size ?? 'md'}"
-                            label="{theme:404_label}"
+                            link="{theme:page_link ?? '/'}"
+                            color="{theme:page_button_variant ?? 'brand'}"
+                            size="{theme:page_button_size ?? 'md'}"
+                            label="{theme:page_label}"
                         }}
                     </div>
                 {{ /if }}
-            {{ /if }}
+
         </div>
 
-        {{ if theme:404_image }}
+        {{ if theme:page_image }}
             <div class="w-full px-4 md:w-1/2 {{ theme:404_image_position === 'left' ? 'order-first mb-8' : 'order-first md:order-none' }}">
                 {{
                     partial:components/picture
-                    :image="theme:404_image"
+                    :image="theme:page_image"
                     cover="true"
                     sizes="(min-width: 200px) 35vw, 90vw"
                 }}

@@ -1,0 +1,76 @@
+title: 'Project Multiple'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        project_multiple_1: 'Variant 1'
+        project_multiple_2: 'Variant 2'
+        project_multiple_3: 'Variant 3'
+        project_multiple_4: 'Variant 4'
+        project_multiple_5: 'Variant 5'
+        project_multiple_6: 'Variant 6'
+        project_multiple_7: 'Variant 7'
+      display: 'Project Multiple Variant'
+      default: project_multiple_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: projects
+    field:
+      collapse: accordion
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: description
+              field:
+                antlers: false
+                display: Description
+                type: textarea
+                icon: textarea
+                listable: hidden
+            -
+              handle: image
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                instructions: 'Project Image'
+                listable: hidden
+                validate:
+                  - required
+            -
+              import: small_link
+      display: Projects
+      type: replicator
+      icon: replicator
+      listable: hidden

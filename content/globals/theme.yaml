@@ -147,10 +147,8 @@ data:
           title: Youtube
           url: www.youtube.com
           icon: social/youtube-1641400598.svg
-  logo_overlay: true
-  logo_overlay_position: right
-  display_divider: true
-  divider_style: logo
+  logo_overlay: false
+  display_divider: false
   footer_items:
     -
       rich_text:
@@ -190,45 +188,22 @@ data:
   favicon_180: favicons/apple-touch-icon.png
   favicon_32: favicons/favicon-32x32.png
   favicon_16: favicons/favicon-16x16.png
-  404_title: 'Page not found'
-  404_desc:
+  page_title: 'Page not found'
+  page_desc:
     -
       type: paragraph
       content:
         -
           type: text
-          text: 'The page you were looking for doesn’t '
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: exist
-        -
-          type: text
-          text: '. You may have mistyped the address or the page may have '
-        -
-          type: text
-          marks:
-            -
-              type: link
-              attrs:
-                href: 'https://www.google.com/'
-                rel: 'noopener noreferrer'
-                target: null
-                title: ''
-          text: moved
-        -
-          type: text
-          text: .
-  404_image: images/outer_space.png
-  404_image_position: right
-  404_toggle: true
-  404_label: 'Go Back'
-  404_link: /
-  404_button_variant: brand
-  404_button_size: xl
-  404_target_blank: false
+          text: 'The page cannot be found.'
+  page_image: images/outer_space.png
+  page_image_position: right
+  page_toggle: true
+  page_label: 'Go Back'
+  page_link: /
+  page_button_variant: brand
+  page_button_size: xl
+  page_target_blank: false
   sitemap_collections:
     - pages
   sitemap_change_frequency: weekly

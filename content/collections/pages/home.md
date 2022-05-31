@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 369c0269-580d-4c49-af9f-0450df6fea35
-updated_at: 1642177127
+updated_at: 1649772234
 blocks:
   -
     version: hero_section_3
@@ -193,6 +193,5 @@ blocks:
     type: cta_section
     enabled: true
 custom_page_header: false
-header_version: header_1
 has_subtitle: false
 ---

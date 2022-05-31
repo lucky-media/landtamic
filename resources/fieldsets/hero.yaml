@@ -1,0 +1,70 @@
+title: Hero
+fields:
+  -
+    handle: version
+    field:
+      options:
+        hero_section_1: 'Variant 1'
+        hero_section_2: 'Variant 2'
+        hero_section_3: 'Variant 3'
+        hero_section_4: 'Variant 4'
+        hero_section_5: 'Variant 5'
+        hero_section_6: 'Variant 6'
+        hero_section_7: 'Variant 7'
+      display: 'Hero Variant'
+      default: hero_section_1
+      type: button_group
+      icon: button_group
+      instructions: 'Please select a hero variant'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      instructions: 'Title of the hero'
+      listable: hidden
+      validate:
+        - required
+  -
+    handle: has_description
+    field:
+      display: 'Has Description'
+      type: toggle
+      icon: toggle
+      instructions: 'Toggle this to enable hero description, under the title.'
+      listable: hidden
+      width: 33
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      instructions: 'Hero description if applicable'
+      listable: hidden
+      if:
+        has_description: 'equals true'
+      width: 66
+  -
+    handle: hero_image
+    field:
+      mode: list
+      restrict: false
+      allow_uploads: true
+      display: 'Hero Image'
+      type: assets
+      icon: assets
+      listable: hidden
+      container: assets
+      max_files: 1
+      instructions_position: above
+      show_filename: true
+  -
+                  import: button

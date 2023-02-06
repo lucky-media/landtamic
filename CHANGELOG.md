@@ -1,4 +1,13 @@
 # Changelog
+## v1.4 (2022-02-06)
+This release updates the frontend packages and ensures compatibility with the new Statamic Parser.
+
+### What's improved
+- Updated dependencies
+
+### What's new
+- Vite is now the default bundler.
+- Please remove the unnecessary files after installing `webpack.mix.js`, `cp.css`, `site.css` as they are not needed.
 
 ## v1.3 (2022-05-31)
 This update brings a couple of bug fixes and updates.

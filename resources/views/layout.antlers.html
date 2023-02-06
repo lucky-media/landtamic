@@ -12,11 +12,7 @@
     {{# SEO Meta Tags #}}
     {{ seotamic }}
 
-    {{# Styling Tags #}}
-    <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}" />
-
-    {{# Scripts #}}
-    <script src="{{ mix src='/js/site.js' }}" defer></script>
+    {{ vite src="resources/css/tailwind.css|resources/js/site.js" }}
 </head>
 
 <body

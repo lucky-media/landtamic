@@ -13,6 +13,7 @@ export_paths:
   - content/collections/pages/home.md
   - config/statamic/cp.php
   - config/statamic/assets.php
+  - config/statamic/antlers.php
   - resources/forms
   - resources/fieldsets
   - resources/blueprints
@@ -21,15 +22,13 @@ export_paths:
   - resources/js
   - resources/views
   - routes/web.php
+  - public/build/
   - public/assets/favicons
   - public/assets/images
   - public/assets/social
-  - public/css
-  - public/js
-  - public/fonts
   - package.json
   - tailwind.config.js
-  - webpack.mix.js
+  - vite.config.js
   - CHANGELOG.md
 dependencies:
   cnj/seotamic: ^2.0

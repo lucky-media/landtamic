@@ -1,0 +1,196 @@
+{
+  "node_modules/@fontsource/manrope/files/manrope-latin-ext-700-normal.woff2": {
+    "file": "assets/manrope-latin-ext-700-normal-5963ac5a.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-ext-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-700-normal.woff2": {
+    "file": "assets/manrope-cyrillic-ext-700-normal-4a6ec8cc.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-400-normal.woff2": {
+    "file": "assets/manrope-cyrillic-ext-400-normal-169e512a.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-400-normal.woff2": {
+    "file": "assets/manrope-cyrillic-400-normal-7ad0fb12.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-vietnamese-700-normal.woff2": {
+    "file": "assets/manrope-vietnamese-700-normal-a7f83067.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-vietnamese-400-normal.woff2": {
+    "file": "assets/manrope-vietnamese-400-normal-174a470c.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-ext-400-normal.woff2": {
+    "file": "assets/manrope-latin-ext-400-normal-ae771e01.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff2": {
+    "file": "assets/manrope-latin-700-normal-42ec4962.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-greek-400-normal.woff2": {
+    "file": "assets/manrope-greek-400-normal-fd57e2ca.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-greek-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-600-normal.woff2": {
+    "file": "assets/manrope-cyrillic-600-normal-edbf67c8.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-600-normal.woff2": {
+    "file": "assets/manrope-cyrillic-ext-600-normal-48f7dd82.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-400-normal.woff2": {
+    "file": "assets/manrope-latin-400-normal-30694bbe.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-700-normal.woff2": {
+    "file": "assets/manrope-cyrillic-700-normal-c620feea.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-greek-700-normal.woff2": {
+    "file": "assets/manrope-greek-700-normal-2b278560.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-greek-700-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-vietnamese-600-normal.woff2": {
+    "file": "assets/manrope-vietnamese-600-normal-61218da7.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-ext-600-normal.woff2": {
+    "file": "assets/manrope-latin-ext-600-normal-c4525d6b.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-500-normal.woff2": {
+    "file": "assets/manrope-cyrillic-500-normal-ef1c6247.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-greek-600-normal.woff2": {
+    "file": "assets/manrope-greek-600-normal-4d6bec67.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-greek-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-500-normal.woff2": {
+    "file": "assets/manrope-cyrillic-ext-500-normal-09963671.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-greek-500-normal.woff2": {
+    "file": "assets/manrope-greek-500-normal-6b875ca2.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-greek-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff2": {
+    "file": "assets/manrope-latin-600-normal-ccf8e22e.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-ext-500-normal.woff2": {
+    "file": "assets/manrope-latin-ext-500-normal-f80689ce.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-ext-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-vietnamese-500-normal.woff2": {
+    "file": "assets/manrope-vietnamese-500-normal-05750d5a.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-vietnamese-800-normal.woff2": {
+    "file": "assets/manrope-vietnamese-800-normal-1c7d4cff.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-800-normal.woff2": {
+    "file": "assets/manrope-cyrillic-ext-800-normal-52dc2e9c.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-ext-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-500-normal.woff2": {
+    "file": "assets/manrope-latin-500-normal-45bc49e6.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-500-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-greek-800-normal.woff2": {
+    "file": "assets/manrope-greek-800-normal-e49e4b85.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-greek-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-cyrillic-800-normal.woff2": {
+    "file": "assets/manrope-cyrillic-800-normal-222bc747.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-cyrillic-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-800-normal.woff2": {
+    "file": "assets/manrope-latin-800-normal-1aa8fd33.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-latin-ext-800-normal.woff2": {
+    "file": "assets/manrope-latin-ext-800-normal-4563d2f0.woff2",
+    "src": "node_modules/@fontsource/manrope/files/manrope-latin-ext-800-normal.woff2"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-all-700-normal.woff": {
+    "file": "assets/manrope-all-700-normal-78991312.woff",
+    "src": "node_modules/@fontsource/manrope/files/manrope-all-700-normal.woff"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-all-400-normal.woff": {
+    "file": "assets/manrope-all-400-normal-1920a0f3.woff",
+    "src": "node_modules/@fontsource/manrope/files/manrope-all-400-normal.woff"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-all-600-normal.woff": {
+    "file": "assets/manrope-all-600-normal-599f60c6.woff",
+    "src": "node_modules/@fontsource/manrope/files/manrope-all-600-normal.woff"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-all-500-normal.woff": {
+    "file": "assets/manrope-all-500-normal-43726490.woff",
+    "src": "node_modules/@fontsource/manrope/files/manrope-all-500-normal.woff"
+  },
+  "node_modules/@fontsource/manrope/files/manrope-all-800-normal.woff": {
+    "file": "assets/manrope-all-800-normal-0c42284f.woff",
+    "src": "node_modules/@fontsource/manrope/files/manrope-all-800-normal.woff"
+  },
+  "resources/js/site.css": {
+    "file": "assets/site-5ae91114.css",
+    "src": "resources/js/site.css"
+  },
+  "resources/css/tailwind.css": {
+    "file": "assets/tailwind-1a97dbc2.css",
+    "src": "resources/css/tailwind.css",
+    "isEntry": true
+  },
+  "resources/js/site.js": {
+    "file": "assets/site-0295ccc6.js",
+    "src": "resources/js/site.js",
+    "isEntry": true,
+    "css": [
+      "assets/site-5ae91114.css"
+    ],
+    "assets": [
+      "assets/manrope-cyrillic-ext-400-normal-169e512a.woff2",
+      "assets/manrope-all-400-normal-1920a0f3.woff",
+      "assets/manrope-cyrillic-400-normal-7ad0fb12.woff2",
+      "assets/manrope-greek-400-normal-fd57e2ca.woff2",
+      "assets/manrope-vietnamese-400-normal-174a470c.woff2",
+      "assets/manrope-latin-ext-400-normal-ae771e01.woff2",
+      "assets/manrope-latin-400-normal-30694bbe.woff2",
+      "assets/manrope-cyrillic-ext-500-normal-09963671.woff2",
+      "assets/manrope-all-500-normal-43726490.woff",
+      "assets/manrope-cyrillic-500-normal-ef1c6247.woff2",
+      "assets/manrope-greek-500-normal-6b875ca2.woff2",
+      "assets/manrope-vietnamese-500-normal-05750d5a.woff2",
+      "assets/manrope-latin-ext-500-normal-f80689ce.woff2",
+      "assets/manrope-latin-500-normal-45bc49e6.woff2",
+      "assets/manrope-cyrillic-ext-600-normal-48f7dd82.woff2",
+      "assets/manrope-all-600-normal-599f60c6.woff",
+      "assets/manrope-cyrillic-600-normal-edbf67c8.woff2",
+      "assets/manrope-greek-600-normal-4d6bec67.woff2",
+      "assets/manrope-vietnamese-600-normal-61218da7.woff2",
+      "assets/manrope-latin-ext-600-normal-c4525d6b.woff2",
+      "assets/manrope-latin-600-normal-ccf8e22e.woff2",
+      "assets/manrope-cyrillic-ext-700-normal-4a6ec8cc.woff2",
+      "assets/manrope-all-700-normal-78991312.woff",
+      "assets/manrope-cyrillic-700-normal-c620feea.woff2",
+      "assets/manrope-greek-700-normal-2b278560.woff2",
+      "assets/manrope-vietnamese-700-normal-a7f83067.woff2",
+      "assets/manrope-latin-ext-700-normal-5963ac5a.woff2",
+      "assets/manrope-latin-700-normal-42ec4962.woff2",
+      "assets/manrope-cyrillic-ext-800-normal-52dc2e9c.woff2",
+      "assets/manrope-all-800-normal-0c42284f.woff",
+      "assets/manrope-cyrillic-800-normal-222bc747.woff2",
+      "assets/manrope-greek-800-normal-e49e4b85.woff2",
+      "assets/manrope-vietnamese-800-normal-1c7d4cff.woff2",
+      "assets/manrope-latin-ext-800-normal-4563d2f0.woff2",
+      "assets/manrope-latin-800-normal-1aa8fd33.woff2"
+    ]
+  }
+}

@@ -147,7 +147,6 @@ By default we make use of the SEOtamic addon which is installed together with th
 ## Styling
 The design of Landtamic is done entirely with TailwindCSS. We have added many different colors on the Tailwind Config file and you can change the primary colors to make a different color combination for your website.
 * Configuration of TailwindCSS 
-  * We use JIT Mode by default.
   * Edit the config **tailwind.config.js**
   * Font Family - default is sans: Manrope.
   * Colors - primary, secondary, info color names because it makes it easier to apply different colors..
@@ -159,12 +158,12 @@ Working with them its easy, just go to their website and search for your desired
 More info on the [official documentation of Font Source](https://fontsource.org/docs/introduction).
 
 ## Compiling Assets
-By default we make use of Laravel Mix to compile all the assets. Make sure to run the following commands after installing the starter-kit.
+By default we make use of Vite with [Laravel](https://laravel.com/docs/9.x/vite) to compile all the assets.
+Make sure to run the following commands after installing the starter-kit.
 
 * `npm install` - to install all the required dependencies.
 * `npm run dev` - to run in development mode.
-* `npm run watch` - to run in development with hot reload.
-* `npm run production` - to compile assets for production.
+* `npm run build` - to compile assets for production.
 
 ## 🔮 Future Features:
 * Video Tutorial

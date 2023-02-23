@@ -173,6 +173,9 @@ Make sure to run the following commands after installing the starter-kit.
 * E-Commerce Starter Kit
     * A separate starter kit that installs additional views for e-commerce on top of Landtamic
 
+## Commercial addon
+Landtamic is a commercial starter kit - you **must purchase a license** via the [Statamic Marketplace](https://statamic.com/starter-kits/luckymedia/landtamic) to use it in your project.
+
 ## 🐞 Bugs and 💡 Feature Requests
 Please refer to the issues tab to submit a Bug or a Feature Request.
 

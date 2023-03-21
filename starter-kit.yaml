@@ -29,6 +29,7 @@ export_paths:
   - package.json
   - tailwind.config.js
   - vite.config.js
+  - postcss.config.js
   - CHANGELOG.md
 dependencies:
   cnj/seotamic: ^2.0

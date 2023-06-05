@@ -1,0 +1,55 @@
+<title>
+    {{ lucky_seo:title | striptags | entities | trim }}
+</title>
+
+{{ if {lucky_seo:description} }}
+    <meta name="description" content="{{ lucky_seo:description | striptags | entities | trim }}">
+{{ /if }}
+
+<meta property="og:type" content="website" />
+
+{{ if {lucky_seo:og_title} }}
+    <meta name="og:title" content="{{ lucky_seo:og_title | striptags | entities | trim }}">
+{{ /if }}
+
+{{ if {lucky_seo:og_description} }}
+    <meta name="og:description" content="{{ lucky_seo:og_description | striptags | entities | trim }}">
+{{ /if }}
+
+
+{{ $og_image = seo_og_image ?? seo:og_image }}
+
+{{ if $og_image }}
+    {{ asset :url="seo:og_image" }}
+        <meta property="og:image" content="{{ glide:url preset='og_image' }}" />
+        <meta property="og:image:width" content="{{ width }}" />
+        <meta property="og:image:height" content="{{ height }}" />
+        {{ if seo:display_twitter_tags }}
+            <meta name="twitter:image" content="{{ glide:url }}" />
+        {{ /if }}
+    {{ /asset  }}
+{{ /if }}
+
+{{ if {lucky_seo:canonical} }}
+    <link rel="canonical" href="{{ lucky_seo:canonical }}" />
+    <meta property="og:url" content="{{ lucky_seo:canonical }}" />
+{{ /if }}
+
+{{ if seo:sitename }}
+    <meta property="og:site_name" content="{{ seo:sitename | striptags | entities | trim }}" />
+{{ /if }}
+
+<meta property="og:locale" content="{{ site:locale }}" />
+
+{{ if seo:display_twitter_tags }}
+    <meta name="twitter:card" content="summary_large_image" />
+    {{ if seo:twitter_handle }}
+        <meta name="twitter:site" content="{{ seo:twitter_handle | trim | ensure_left:@ }}" />
+    {{ /if }}
+    {{ if {lucky_seo:tw_title} }}
+        <meta name="twitter:title" content="{{ lucky_seo:tw_title | striptags | entities | trim }}" />
+    {{ /if }}
+    {{ if {lucky_seo:tw_description} }}
+        <meta name="twitter:description" content="{{ lucky_seo:tw_description | striptags | entities | trim }}" />
+    {{ /if }}
+{{ /if }}

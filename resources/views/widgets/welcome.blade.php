@@ -22,15 +22,6 @@
                 <p>Add entries to the Navigation or Footer </p>
             </div>
         </a>
-        <a href="{{ cp_route('cnj.seotamic.index') }}" class="flex items-start p-2 rounded-md hover:bg-blue-100 group">
-            <div class="w-12 h-12 p-1 mr-3 text-blue-900 bg-blue-100 rounded-full group-hover:bg-blue-200">
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-900 fill-current" fill="none" viewBox="0 0 24 24"><defs/><path d="M20 17.57a4.3 4.3 0 10-3.67 2.06 4.37 4.37 0 002.24-.63l1.72 1.73a1.002 1.002 0 001.639-.325 1 1 0 00-.219-1.095L20 17.57zM18 17a2.37 2.37 0 01-3.27 0 2.32 2.32 0 010-3.27 2.31 2.31 0 013.944 1.635c0 .613-.242 1.2-.674 1.635zm1-14H5a3 3 0 00-3 3v9a3 3 0 003 3h4a1 1 0 000-2H5a1 1 0 01-1-1V9h16v1a1 1 0 002 0V6a3 3 0 00-3-3zm1 4H4V6a1 1 0 011-1h14a1 1 0 011 1v1zm-10 4H7a1 1 0 000 2h3a1 1 0 000-2z"/></svg>
-            </div>
-            <div class="flex-1">
-                <h2 class="text-blue-darkest">Configure SEO Settings</h2>
-                <p>Here you can enter some defaults, but you can also override for each entry</p>
-            </div>
-        </a>
         <a href="{{ cp_route('users.edit', auth()->user()->id()) }}" class="flex items-start p-2 rounded-md hover:bg-blue-100 group">
             <div class="w-12 h-12 p-1 mr-3 text-blue-900 bg-blue-100 rounded-full group-hover:bg-blue-200">
               <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-900 fill-current" fill="none" viewBox="0 0 24 24"><defs/><path d="M12 2a10 10 0 00-7.35 16.76 10.001 10.001 0 0014.7 0A9.999 9.999 0 0012 2zm0 18a8 8 0 01-5.55-2.25 6 6 0 0111.1 0A8 8 0 0112 20zm-2-10a2 2 0 114 0 2 2 0 01-4 0zm8.91 6A8 8 0 0015 12.62a4 4 0 10-6 0A8 8 0 005.09 16 7.92 7.92 0 014 12a8 8 0 1116 0 7.92 7.92 0 01-1.09 4z"/></svg>

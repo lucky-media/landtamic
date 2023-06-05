@@ -31,5 +31,3 @@ export_paths:
   - vite.config.js
   - postcss.config.js
   - CHANGELOG.md
-dependencies:
-  cnj/seotamic: ^2.0

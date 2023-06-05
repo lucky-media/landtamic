@@ -1,0 +1,263 @@
+title: SEO
+fields:
+  -
+    handle: meta
+    field:
+      display: META
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: seo_title
+    field:
+      options:
+        title: Title
+        custom: Custom
+      display: Title
+      type: button_group
+      icon: button_group
+      instructions: 'It can be used to determine the title used on search engine results pages.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      default: title
+      width: 50
+  -
+    handle: seo_meta_description
+    field:
+      options:
+        empty: Empty
+        general: General
+        custom: Custom
+      default: empty
+      display: 'Meta Description'
+      type: button_group
+      icon: button_group
+      instructions: 'It can be used to determine the text used under the title on search engine results pages. If empty, search engines will automatically generate this text.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: seo_custom_meta_title
+    field:
+      input_type: text
+      character_limit: 100
+      antlers: false
+      display: 'Custom Meta Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_title: 'equals custom'
+  -
+    handle: seo_custom_meta_description
+    field:
+      character_limit: '200'
+      antlers: false
+      display: 'Custom Meta Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_meta_description: 'equals custom'
+  -
+    handle: seo_canonical
+    field:
+      options:
+        none: None
+        url: URL
+        entry: Entry
+      default: none
+      display: Canonical
+      type: button_group
+      icon: button_group
+      instructions: 'By default it will be set to the page url'
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: seo_canonical_url
+    field:
+      input_type: url
+      antlers: false
+      display: 'Canonical URL'
+      type: text
+      icon: text
+      width: 66
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_canonical: 'equals url'
+  -
+    handle: seo_canonical_custom_entry
+    field:
+      mode: default
+      create: true
+      display: 'Custom Entry'
+      type: entries
+      icon: entries
+      width: 66
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_canonical: 'equals entry'
+  -
+    handle: social
+    field:
+      display: Social
+      type: section
+      icon: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+  -
+    handle: seo_og_description
+    field:
+      options:
+        meta: 'Meta Description'
+        general: 'General Description'
+        custom: Custom
+      default: general
+      display: 'Open Graph Description'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: seo_og_title
+    field:
+      options:
+        title: Title
+        custom: Custom
+      default: title
+      display: 'Open Graph Title'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: seo_custom_og_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Custom Open Graph Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_og_title: 'equals custom'
+  -
+    handle: seo_custom_og_desc
+    field:
+      antlers: false
+      display: 'Custom Open Graph Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_og_description: 'equals custom'
+  -
+    handle: seo_tw_title
+    field:
+      options:
+        title: Title
+        custom: Custom
+      default: title
+      display: 'Twitter Title'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: seo_tw_description
+    field:
+      options:
+        meta: 'Meta Description'
+        general: 'General Description'
+        custom: Custom
+      default: general
+      display: 'Twitter Description'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      width: 50
+  -
+    handle: seo_custom_tw_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Custom Twitter Title'
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_tw_title: 'equals custom'
+  -
+    handle: seo_custom_tw_desc
+    field:
+      antlers: false
+      display: 'Custom Twitter Description'
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      if:
+        seo_tw_description: 'equals custom'
+  -
+    handle: seo_og_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: 'OG Image'
+      type: assets
+      icon: assets
+      instructions: 'If not set, the general image will be used. It''s best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

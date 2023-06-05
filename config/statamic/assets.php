@@ -52,7 +52,7 @@ return [
         |
         */
 
-        'cache' => false,
+        'cache' => env('SAVE_CACHED_IMAGES', false),
         'cache_path' => public_path('img'),
 
         /*
@@ -79,6 +79,7 @@ return [
             'lg' => ['w' => 1280, 'h' => 10000, 'q' => 85, 'fit' => 'contain'],
             'xl' => ['w' => 1440, 'h' => 10000, 'q' => 95, 'fit' => 'contain'],
             '2xl' => ['w' => 1680, 'h' => 10000, 'q' => 95, 'fit' => 'contain'],
+            'og_image' => ['w' => 1200, 'h' => 630, 'q' => 95, 'fit' => 'contain'],
         ],
 
     ],

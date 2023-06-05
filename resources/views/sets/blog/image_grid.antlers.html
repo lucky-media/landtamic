@@ -1,13 +1,11 @@
-{{ if image_grid === 'two' }}
-    {{ var:grid_classes value="md:grid-cols-2" }}
-{{ elseif image_grid === 'three' }}
-    {{ var:grid_classes value="md:grid-cols-3" }}
-{{ elseif image_grid === 'four' }}
-    {{ var:grid_classes value="md:grid-cols-4" }}
-{{ /if }}
+{{ $grid_classes = switch(
+    (image_grid == 'two') => 'md:grid-cols-2',
+    (image_grid == 'three') => 'md:grid-cols-3',
+    () => 'md:grid-cols-4')
+}}
 
 <div class="max-w-5xl py-8 mx-auto">
-    <div class="grid {{ var:grid_classes }} gap-8">
+    <div class="grid {{ $grid_classes }} gap-8">
         {{ images }}
             {{
                 partial:components/picture

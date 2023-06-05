@@ -1,0 +1,258 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: sitename
+        field:
+          input_type: text
+          antlers: false
+          display: Sitename
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: prepend_on_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Prepend on Title'
+          type: text
+          icon: text
+          instructions: 'This will be PREPENDED to all of the titles.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: append_on_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Append on Title'
+          type: text
+          icon: text
+          instructions: 'This will be APPENDED to all of the titles.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: description
+        field:
+          display: Description
+          type: section
+          icon: section
+          instructions: 'It is used for one major purpose: to describe the page to searchers as they read through the SERPs. This tag doesn''t influence ranking, but it''s very important regardless. It''s the ad copy that will determine if users click on your result. Keep it within 160 characters, and write it to catch the user''s attention. Sell the page — get them to click on the result.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: meta_description
+        field:
+          antlers: false
+          display: 'Meta Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  social:
+    display: Social
+    fields:
+      -
+        handle: open_graph
+        field:
+          display: 'Open Graph'
+          type: section
+          icon: section
+          instructions: 'Use your logo or any other branded image for the rest of your pages. Use images with a 1.91:1 ratio and minimum recommended dimensions of 1200x630 for optimal clarity across all devices. The image will be resized to 1200 width.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: display_og_tags
+        field:
+          default: true
+          display: 'Display OG Tags'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: og_site_name
+        field:
+          input_type: text
+          character_limit: 50
+          antlers: false
+          display: 'Site Name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_og_tags: 'equals true'
+      -
+        handle: og_site_title
+        field:
+          input_type: text
+          character_limit: 100
+          antlers: false
+          display: 'Site Title'
+          type: text
+          icon: text
+          instructions: 'Keep it short to prevent overflow. 40 characters for mobile and 60 for desktop is roughly the sweet spot. Use the raw title. Don’t include branding (e.g., your site name).'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_og_tags: 'equals true'
+      -
+        handle: og_description
+        field:
+          character_limit: '200'
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          instructions: 'General Description, can be overridden on specific pages. Complement the title to make the snippet as appealing and click-worthy as possible. Copy your meta description here if it makes sense. Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_og_tags: 'equals true'
+      -
+        handle: og_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'OG Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: twitter
+        field:
+          display: Twitter
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: display_twitter_tags
+        field:
+          default: true
+          display: 'Display Twitter Tags'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: twitter_handle
+        field:
+          input_type: text
+          antlers: false
+          display: 'Twitter Handle'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_twitter_tags: 'equals true'
+      -
+        handle: tw_title
+        field:
+          input_type: text
+          antlers: false
+          display: Title
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_twitter_tags: 'equals true'
+          width: 50
+      -
+        handle: tw_description
+        field:
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          if:
+            display_twitter_tags: 'equals true'
+  sitemap:
+    display: Sitemap
+    fields:
+      -
+        handle: sitemap_collections
+        field:
+          mode: select
+          display: 'Sitemap Collections'
+          type: collections
+          icon: collections
+          listable: hidden
+      -
+        handle: sitemap_change_frequency
+        field:
+          options:
+            always: Always
+            hourly: Hourly
+            daily: Daily
+            weekly: Weekly
+            monthly: Monthly
+            yearly: Yearly
+            never: Never
+          clearable: false
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          instructions: 'How often to instruct search engines to crawl.'
+          width: 50
+          default: weekly
+          listable: hidden
+          display: 'Change frequency'
+      -
+        handle: sitemap_priority
+        field:
+          type: text
+          display: Priority
+          default: 0.5
+          instructions: 'Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites, it only lets the search engines know which pages you deem most important for the crawlers.'
+          width: 50
+          listable: hidden

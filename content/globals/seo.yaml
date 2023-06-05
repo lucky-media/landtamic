@@ -1,0 +1,10 @@
+title: SEO
+data:
+  sitename: Landtamic
+  append_on_title: Landtamic
+  meta_description: 'Landtamic is the all-in-one solution for building fast and creative websites with Statamic'
+  display_og_tags: true
+  og_description: 'Landtamic is the all-in-one solution for building fast and creative websites with Statamic'
+  display_twitter_tags: true
+  sitemap_change_frequency: weekly
+  sitemap_priority: 0.5

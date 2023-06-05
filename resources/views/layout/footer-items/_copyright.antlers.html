@@ -1,11 +1,9 @@
-{{ if align === 'left' }}
-    {{ var:text_align value="mx-auto md:mx-0 md:mr-auto" }}
-{{ elseif align === 'right' }}
-    {{ var:text_align value="mx-auto md:mx-0 md:ml-auto" }}
-{{ else }}
-    {{ var:text_align value="mx-auto" }}
-{{ /if }}
+{{ $text_align = switch(
+    (align == 'left') => 'mx-auto md:mx-0 md:mr-auto',
+    (align == 'right') => 'mx-auto md:mx-0 md:ml-auto',
+    () => 'mx-auto')
+}}
 
-<div class="flex flex-col text-sm font-normal text-gray-300 prose prose-p:text-gray-300 prose-a:text-gray-300 prose-a:hover:text-secondary-900 {{ var:text_align }}">
+<div class="flex flex-col text-sm font-normal text-gray-300 prose prose-p:text-gray-300 prose-a:text-gray-300 prose-a:hover:text-secondary-900 {{ $text_align }}">
     {{ rich_text }}
 </div>

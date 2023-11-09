@@ -24,7 +24,7 @@ We have put all our efforts to build an **entirely dynamic** Starter Kit, which 
 * **Alpine.js** used for interactions
 
 ## Installation
-To install Landtamic, simply follow the [Starter Kit installation instructions](https://statamic.dev/installing-a-starter-kit). Note that you will need to be running **Statamic 4.x**.
+To install Landtamic, simply follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit). Note that you will need to be running **Statamic 4.x**.
 
 ### Installing into an existing site
 

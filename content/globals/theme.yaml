@@ -8,6 +8,7 @@ data:
   show_links: true
   links:
     -
+      id: BERxnZHF
       toggle: true
       label: Login
       link: 'https://www.google.com/'
@@ -17,6 +18,7 @@ data:
       type: button
       enabled: true
     -
+      id: lzTTBofA
       toggle: true
       label: Register
       link: 'https://www.google.com/'
@@ -26,54 +28,66 @@ data:
       type: button
       enabled: true
     -
+      id: nf7PhgCx
       image: apple-store.png
       aria_label: 'Apple Store Link'
       link: 'https://www.apple.com'
       type: image_link
       enabled: false
     -
+      id: 3XZwZqQg
       image: play-store.png
       aria_label: 'Play Store'
       link: 'https://www.google.com'
       type: image_link
       enabled: false
     -
+      id: sMuJQfsH
       toggle_social: true
       social_title: 'Social Media'
       social:
         -
+          id: MQBfpZZ5
           title: Twitter
           url: www.twitter.com
           icon: social/twitter-1641400598.svg
         -
+          id: H8Smll0M
           title: Facebook
           url: www.facebook.com
           icon: social/facebook-1641400589.svg
         -
+          id: GBvgdrzd
           title: Dribble
           url: www.dribbble.com
           icon: social/dribbble-1641400584.svg
         -
+          id: KU9HyX3b
           title: Instagram
           url: www.instagram.com
           icon: social/Instagram-1641400598.svg
         -
+          id: jpG9khKh
           title: Behance
           url: www.behance.com
           icon: social/behance-1641400629.svg
         -
+          id: uI9VCbRT
           title: Github
           url: www.github.com
           icon: social/github-1641400598.svg
         -
+          id: 0NEOtBhU
           title: Linkedin
           url: www.linkedin.com
           icon: social/linkedIn-1641400598.svg
         -
+          id: S37nd2nI
           title: Pinterest
           url: www.pinterest.com
           icon: social/pinterest-1641400598.svg
         -
+          id: bc8O8aIk
           title: Youtube
           url: www.youtube.com
           icon: social/youtube-1641400598.svg
@@ -85,31 +99,36 @@ data:
   span_column: false
   footer_column:
     -
+      id: j2rzys3i
       image: images/Light.svg
       type: image
       enabled: true
     -
+      id: lEesJA9d
       rich_text:
         -
           type: paragraph
           content:
             -
               type: text
-              text: "Copyright © 2022 Landtamic UI Kit. Made with ❤️ by\_"
+              text: "Copyright © {{ now format=\"Y\" }}. Landtamic - Statamic Starter Kit. Made with ❤️ by\_"
             -
               type: text
               marks:
                 -
                   type: link
                   attrs:
-                    href: 'https://www.luckymedia.dev/'
+                    href: 'https://www.luckymedia.dev/?ref=Landtamic'
                     rel: 'noopener noreferrer'
                     target: _blank
                     title: null
+                -
+                  type: bold
               text: 'Lucky Media'
       type: copyright
       enabled: true
     -
+      id: FYsLgTS8
       toggle_social: true
       social_media:
         -
@@ -136,14 +155,17 @@ data:
       enabled: true
       social:
         -
+          id: mHV2GK4I
           title: Twitter
           url: www.twitter.com
           icon: social/twitter-1641400598.svg
         -
+          id: m8xtawPM
           title: Github
           url: www.github.com
           icon: social/github-1641400598.svg
         -
+          id: xClG2Ill
           title: Youtube
           url: www.youtube.com
           icon: social/youtube-1641400598.svg
@@ -151,33 +173,38 @@ data:
   display_divider: false
   footer_items:
     -
+      id: fFwSDEXx
       rich_text:
         -
           type: paragraph
           content:
             -
               type: text
-              text: 'Copyright © 2022 Landtamic UI Kit. Made with ❤️  by '
+              text: "Copyright © {{ now format=\"Y\" }}. Landtamic - Statamic Starter Kit. Made with ❤️ by\_"
             -
               type: text
               marks:
                 -
                   type: link
                   attrs:
-                    href: 'https://www.luckymedia.dev/'
+                    href: 'https://www.luckymedia.dev/?ref=Landtamic'
                     rel: 'noopener noreferrer'
                     target: _blank
                     title: null
+                -
+                  type: bold
               text: 'Lucky Media'
       type: copyright
       enabled: true
       align: left
     -
+      id: ewjDOfNB
       image: images/Light.svg
       type: image
       enabled: true
       align: center
     -
+      id: etwjgmVT
       structure: footer_nav
       type: menu
       enabled: true

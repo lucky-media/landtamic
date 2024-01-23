@@ -5,6 +5,6 @@
     type="{{ input_type ?? 'text' }}"
     placeholder="{{ placeholder or display }}"
     {{ validate | contains:required ?= "required" }}
-    {{ old ?= value="{old}" }}
+    {{ old ?= 'value="{old}"' }}
 />
 

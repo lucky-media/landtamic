@@ -4,5 +4,5 @@
     name="{{ handle }}"
     type="{{ input_type ?? 'text' }}"
     {{ validate | contains:required ?= "required" }}
-    {{ old ?= value="{old}" }}
+    {{ old ?= 'value="{old}"' }}
 />

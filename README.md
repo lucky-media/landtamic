@@ -113,7 +113,7 @@ We have generated all the necessary favicon versions for our Landtamic logo, but
   * Priority - It lets the search engines know which pages you deem most important for the crawlers.
 
 ### SEO
-When you edit a page on the control panel, you can see that each page has the SEO section in the entry editor. For SEO we use a free add-on called Seotamic which you can read about it below this section. Note that for `Posts` we use a custom ViewModel on `App\ViewModels\OgImage.php` and we inject it to the `Posts` collection in order to dynamically add a OG Image based on the `Image`. If you don't need this feature and you want to set the `OG Image` manually on each post please remove this View Model.
+When you edit a page on the control panel, you can see that each page has the SEO section in the entry editor. For SEO we use our own SEO called LuckySEO which you can read about it below this section.
 
 * Meta
   * Title - It can be used to determine the title used on search engine results pages.
@@ -126,10 +126,10 @@ When you edit a page on the control panel, you can see that each page has the SE
   * Open Graph Description
   * Twitter Title
   * Twitter Description
-  * Image - If not set, the general image will be used.
+  * OG Image - If not set, the general image will be used.
 
-### SEOtamic
-By default we make use of the SEOtamic addon which is installed together with the kit. You can control your SEO general settings here. Make sure to read the instructions on each input. This settings can be overridden on specific entries/pages as shown on the SEO section above.
+### LuckySEO
+By default we use our own LuckySEO which comes together with the kit. You can control your SEO general settings here. Make sure to read the instructions on each input. This settings can be overridden on specific entries/pages as shown on the SEO section above.
 
 * Meta
   * Title - While the title tag doesn’t start with "meta," it is in the header and contains information that's very important to SEO. You should always have a unique title tag on every page that describes the page.
@@ -142,7 +142,7 @@ By default we make use of the SEOtamic addon which is installed together with th
   * Site name
   * Title - Keep it short to prevent overflow. 40 characters for mobile and 60 for desktop is roughly the sweet spot. Use the raw title.
   * Description - General Description, can be overridden on specific pages. Complement the title to make the snippet as appealing and click-worthy as possible. Copy your meta description here if it makes sense. Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
-  * Display Twitter Tags - Title and Description
+  * Display Twitter Tags - Title, Handle and Description
 
 ## Styling
 The design of Landtamic is done entirely with TailwindCSS. We have added many different colors on the Tailwind Config file and you can change the primary colors to make a different color combination for your website.

@@ -140,4 +140,18 @@ return [
 
     'cache_meta' => true,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Additional Uploadable Extensions
+    |--------------------------------------------------------------------------
+    |
+    | Statamic will only allow uploads of certain approved file extensions.
+    | If you need to allow more file extensions, you may add them here.
+    |
+    */
+
+    'additional_uploadable_extensions' => [
+        'ico',
+    ],
+
 ];

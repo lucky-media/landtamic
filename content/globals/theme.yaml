@@ -29,14 +29,14 @@ data:
       enabled: true
     -
       id: nf7PhgCx
-      image: apple-store.png
+      image: images/apple-store.png
       aria_label: 'Apple Store Link'
       link: 'https://www.apple.com'
       type: image_link
       enabled: false
     -
       id: 3XZwZqQg
-      image: play-store.png
+      image: images/play-store.png
       aria_label: 'Play Store'
       link: 'https://www.google.com'
       type: image_link

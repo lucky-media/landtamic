@@ -13,7 +13,7 @@ export_paths:
   - content/collections/pages/home.md
   - config/statamic/cp.php
   - config/statamic/assets.php
-  - config/statamic/antlers.php
+  - resources/sites.yaml
   - resources/forms
   - resources/fieldsets
   - resources/blueprints

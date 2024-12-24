@@ -1,4 +1,4 @@
-> Note: We've just released a major upgrade to this starter kit with our new [Landtamic Pro](https://github.com/lucky-media/landtamic-pro).
+> Note: We've just released a major upgrade to this starter kit with our new [Landtamic Pro](https://statamic.com/starter-kits/luckymedia/landtamic-pro).
 
 # 🚀 Landtamic
 Landtamic is an amazing Statamic starter kit for quickly building beautiful websites with Statamic. With over **100 sets** available, Landtamic enables you to generate countless distinct website layouts that differ from one another. Whether you're developing a refined landing page, a multifaceted blog, a personal website, or a SaaS, you can effortlessly customize your preferred design elements, add your logo, and craft engaging content. Building your website is as easy as sipping your morning coffee.

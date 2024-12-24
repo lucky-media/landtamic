@@ -1,12 +1,15 @@
 > Note: We've just released a major upgrade to this starter kit with our new [Landtamic Pro](https://github.com/lucky-media/landtamic-pro).
 
 # 🚀 Landtamic
-Landtamic is the all-in-one solution for building fast and creative websites with Statamic. With over **100 sets** available, Landtamic enables you to generate countless distinct website layouts that differ from one another. Whether you're developing a refined landing page, a multifaceted blog, a personal website, or a SaaS, you can effortlessly customize your preferred design elements, add your logo, and craft engaging content. Building your website is as easy as sipping your morning coffee.
+Landtamic is an amazing Statamic starter kit for quickly building beautiful websites with Statamic. With over **100 sets** available, Landtamic enables you to generate countless distinct website layouts that differ from one another. Whether you're developing a refined landing page, a multifaceted blog, a personal website, or a SaaS, you can effortlessly customize your preferred design elements, add your logo, and craft engaging content. Building your website is as easy as sipping your morning coffee.
 
-## What makes Landtamic the ideal choice?
+## ⚔️ Landtamic Pro vs Landtamic
+The difference is the updated design, light/dark mode, better components ( Blade ), and a refactor of what we had. Landtamic will remain a legacy version, it will only receive bug fixes. For Pro, we have other plans we are planning to add support for Forms ( similar to Formatic ) as an optional starter kit, and possibly add an eComm starter kit as well.
+
+## 🤔 What makes Landtamic the ideal choice?
 We have put all our efforts to build an **entirely dynamic** Starter Kit, which means you won't need to modify any code. Instead, you can use the user-friendly **control panel** to construct your website and modify its content. Additionally, all sets and design elements have been thoroughly **tested** to ensure they adapt seamlessly to **various screen sizes**. By changing the primary colors, you can create even more combinations to make your website look stunning.
 
-## Features of Landtamic
+## 🧰 Features of Landtamic
 * More than **100 sets**
 * Easy customizable with **Tailwind**
 * **Component driven approach**, ready-made antlers components for Buttons, Headings, etc.
@@ -25,22 +28,22 @@ We have put all our efforts to build an **entirely dynamic** Starter Kit, which 
 * Tailwind **Typography** and **Forms**
 * **Alpine.js** used for interactions
 
-## Installation
+## ⚙️ Installation
 To install Landtamic, simply follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit). Note that you will need to be running **Statamic 5.x**.
 
-### Installing into an existing site
+### 💻 Installing into an existing site
 
     php please starter-kit:install lucky-media/landtamic
     
-### Installing via the Statamic CLI Tool
+### </> Installing via the Statamic CLI Tool
 If you have [Statamic’s CLI Tool installed](https://github.com/statamic/cli), you can create a new Statamic installation with the Landtamic Starter Kit in one line:
 
     statamic new my-site lucky-media/landtamic
 
-## Configuration
+## 🛠️ Configuration
 We have given our best effort to make **Landtamic** is ready made with everything you need. Simply access the control panel and start making changes. We will make sure that Landtamic runs smoothly with future Statamic updates.
 
-### Content
+### ✍🏻 Content
 Once **Landtamic** is installed, you will find that we have preconfigured the landing page and posts to avoid an empty appearance. However, you can effortlessly modify or delete any of our pre-set configurations. The Starter Kit is equipped with two collections - Pages and Posts.
 
 In addition to these collections, we have a plethora of ready-made components available for constructing your website. Each component comes with approximately **5 ~ 7 distinct design variants** to choose from. The following components have been thoughtfully designed:
@@ -65,23 +68,23 @@ In addition to these collections, we have a plethora of ready-made components av
 * 404 Page ( Can be configured from CP to different variants )
 * Standard Text from Tailwind Typography
 
-### Authors
+### 👥 Authors
 The `Users` blueprint has been customized by default to incorporate additional fields for Authors, such as Position and Biography. When an author is selected for a post, their information will be displayed at the end of the post.
 
-### Icons and Images
+### 🌆 Icons and Images
 In sections where an icon is present, there is an image field that enables you to select an icon. We have included a set of pre-made icons for Landtamic in the `assets/icons` folder for your convenience.
 
 During the demo phase, we incorporated images from [unDraw](https://undraw.co/) and [Freepik](https://www.freepik.com/). If you intend to use these images for production purposes, be sure to provide proper attribution in the Footer.
 
-### Globals
+### 🌐 Globals
 The globals have been categorized into a 'Theme' group, allowing you to customize the content as per your requirements.
 
-#### General
+#### ☯ General
   * Logo Normal - Normal light version of the logo (preferably SVG).
   * Logo Dark - Dark version of the logo (preferably SVG).
   * Logo Mark - Used as a divider or overlay in footers, it is recommended here to upload a short version of the logo ( preferably SVG ).
 
-#### Menu
+#### ☰ Menu
   * Logo Position - Should the logo be displayed in the left side or center.
   * Menu Position - Select the position of the menu items, right side is default but you can also set it to left or center.
   * Show Links - In this section you can add different links that will be display along the Logo and Menu. The position of these items will depend on the alignment of the logo/menu
@@ -89,7 +92,7 @@ The globals have been categorized into a 'Theme' group, allowing you to customiz
      * Image Link: Add an image to act as a Button in the header, common examples links to Apple Store / Play Store, podcasts etc.
      * Social Media: Toggle this to enable social media links in the header.
 
-#### Footer - is completely customized based on the options that you select.
+#### ☷ Footer - is completely customized based on the options that you select.
   * Has Menu - If enabled, you will have the option to select a menu for the Footer. We have already included an example menu footer so you can have an idea on how it works.
   * Custom Columns - If you want to add a custom column to the Menu, here you have the ability to have 3 sets:
      * Image - Can be used to upload the brand logo.
@@ -100,21 +103,21 @@ The globals have been categorized into a 'Theme' group, allowing you to customiz
      * Footer Divider - Divider is useful when you have the footer menu enabled and you want to distinguish the small footer with the footer menu. Here you have 3 options: Contained ( inside the container ), Full Width and Logo Divider.
      * Footer Items: A replicator field to add / remove footer items based on your preference. Copyright - To add a copyright text. Image - If you want an image / preferably logo to be displayed in the footer. Menu - Suitable to display a small horizontal menu in the footer for small websites / landing pages. 
 
-#### Favicon
+#### 🌀 Favicon
 We have generated all the necessary favicon versions for our Landtamic logo, but you are welcome to replace them with your own. Feel free to add your own. The favicon's were generated using [Real Favicon Generator](https://realfavicongenerator.net/). Please note that there is no need to include `site.webmanifest` as it is automatically generated with Statamic.
 
-#### 404 Page - Configure the default settings for the `404` Page:
+#### ⁴⁰⁴ 404 Page - Configure the default settings for the `404` Page:
   * 404 Title - Set the Title
   * 404 Description - Description used under the title.
   * 404 Image - We have included a default image, which can be aligned to either left or right side.
   * 404 Button - Optionally include a button which will send the user to a different page.
 
-#### Sitemap
+#### 🗺️ Sitemap
   * Sitemap collections - Choose which collection should be included in your sitemap (default is set for Pages and Posts).
   * Change Frequency - How often do you want to instruct search engines to crawl?
   * Priority - It lets the search engines know which pages you deem most important for the crawlers.
 
-### SEO
+### 🧭 SEO
 When you edit a page on the control panel, you can see that each page has the SEO section in the entry editor. For SEO we use our own SEO called LuckySEO which you can read about it below this section.
 
 * Meta
@@ -130,7 +133,7 @@ When you edit a page on the control panel, you can see that each page has the SE
   * Twitter Description
   * OG Image - If not set, the general image will be used.
 
-### LuckySEO
+### ᯓ  ✈︎ LuckySEO
 By default we use our own LuckySEO which comes together with the kit. You can control your SEO general settings here. Make sure to read the instructions on each input. This settings can be overridden on specific entries/pages as shown on the SEO section above.
 
 * Meta
@@ -146,20 +149,20 @@ By default we use our own LuckySEO which comes together with the kit. You can co
   * Description - General Description, can be overridden on specific pages. Complement the title to make the snippet as appealing and click-worthy as possible. Copy your meta description here if it makes sense. Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
   * Display Twitter Tags - Title, Handle and Description
 
-## Styling
+## 🎨 Styling
 The design of Landtamic is done entirely with TailwindCSS. We have added many different colors on the Tailwind Config file and you can change the primary colors to make a different color combination for your website.
 * Configuration of TailwindCSS 
   * Edit the config **tailwind.config.js**
   * Font Family - default is sans: Manrope.
   * Colors - primary, secondary, info color names because it makes it easier to apply different colors..
 
-## Fonts
+## ✎ᝰ. Fonts
 We use [Font Source](https://fontsource.org/) for offline fonts to score better points on Google Lighthouse.
 Working with them its easy, just go to their website and search for your desired font, use npm to install it and then include it to the `site.js` file.
 
 More info on the [official documentation of Font Source](https://fontsource.org/docs/introduction).
 
-## Compiling Assets
+## 🤖 Compiling Assets
 By default we make use of Vite with [Laravel](https://laravel.com/docs/9.x/vite) to compile all the assets.
 Make sure to run the following commands after installing the starter-kit.
 
@@ -175,13 +178,13 @@ Make sure to run the following commands after installing the starter-kit.
 * E-Commerce Starter Kit
     * A separate starter kit that installs additional views for e-commerce on top of Landtamic
 
-## Commercial addon
+## 💰 Commercial addon
 Landtamic is a commercial starter kit - you **must purchase a license** via the [Statamic Marketplace](https://statamic.com/starter-kits/luckymedia/landtamic) to use it in your project.
 
 ## 🐞 Bugs and 💡 Feature Requests
 Please refer to the issues tab to submit a Bug or a Feature Request.
 
-## Credits
+## 🤗 Credits
 Landtamic was brought to you by the lovely team at [Lucky Media](https://www.luckymedia.dev/). We are a digital agency focused on professional, innovative, user-oriented web design & development. If you have any project in mind, feel free to contact us.
 
 Last but not least thanks to the creators/contributors of the following packages which made Landtamic a reality:

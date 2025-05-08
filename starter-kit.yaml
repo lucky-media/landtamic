@@ -26,7 +26,6 @@ export_paths:
   - public/assets/favicons
   - public/assets/images
   - public/assets/social
-  - public/assets/logo
   - package.json
   - vite.config.js
   - CHANGELOG.md

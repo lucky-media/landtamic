@@ -64,5 +64,5 @@
 </div>
 
 <div class="max-w-md mx-auto mt-2 text-center">
-    <p class="text-xs">If you have finished all these steps, you can comment this widget from the <span class="p-0.5 text-blue-900 bg-blue-100 rounded">config/statamic/cp.php</span> and enable other widgets.</p>
+    <p class="text-xs">If you have finished all these steps, you can comment this widget from the <span class="p-0.5 text-blue-900 bg-blue-100 rounded-sm">config/statamic/cp.php</span> and enable other widgets.</p>
 </div>

@@ -1,4 +1,4 @@
-<select class="w-full px-4 py-3 border rounded bg-gray-100 placeholder-gray-800 {{ error ?= 'border-red-500' }} focus:ring-2 focus:ring-primary-900 focus:border-primary-900 focus:ring-opacity-60 {{ error ? 'border-red-500' : 'border-transparent' }}" name="{{ handle }}{{ multiple ?= "[]" }}" {{ multiple ?= "multiple" }}>
+<select class="w-full px-4 py-3 border rounded-sm bg-gray-100 placeholder-gray-800 {{ error ?= 'border-red-500' }} focus:ring-2 focus:ring-primary-900/60 focus:border-primary-900 {{ error ? 'border-red-500' : 'border-transparent' }}" name="{{ handle }}{{ multiple ?= "[]" }}" {{ multiple ?= "multiple" }}>
     {{ unless multiple }}
         <option value>{{ trans key="Please select..." }}</option>
     {{ /unless }}

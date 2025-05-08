@@ -40,88 +40,66 @@ fields:
     handle: testimonials
     field:
       collapse: accordion
-      sets:
-        new_set:
-          display: 'New Set'
-          fields:
-            -
-              handle: title
-              field:
-                input_type: text
-                antlers: false
-                display: Title
-                type: text
-                icon: text
-                listable: hidden
-            -
-              handle: description
-              field:
-                antlers: false
-                display: Description
-                type: textarea
-                icon: textarea
-                listable: hidden
-                validate:
-                  - required
-            -
-              handle: has_author
-              field:
-                default: false
-                display: 'Has Author'
-                type: toggle
-                icon: toggle
-                listable: hidden
-            -
-              handle: author
-              field:
-                display: Author
-                type: section
-                icon: section
-                listable: hidden
-                if:
-                  has_author: 'equals true'
-            -
-              handle: full_name
-              field:
-                input_type: text
-                antlers: false
-                display: 'Full Name'
-                type: text
-                icon: text
-                listable: hidden
-                required:
-                  - 'required_if:has_author,true'
-                if:
-                  has_author: 'equals true'
-                width: 50
-            -
-              handle: position
-              field:
-                input_type: text
-                antlers: false
-                display: Position
-                type: text
-                icon: text
-                listable: hidden
-                if:
-                  has_author: 'equals true'
-                width: 50
-            -
-              handle: image
-              field:
-                mode: list
-                container: assets
-                restrict: false
-                allow_uploads: true
-                max_files: 1
-                display: Image
-                type: assets
-                icon: assets
-                listable: hidden
-                show_filename: true
-                if:
-                  has_author: 'equals true'
       display: Testimonials
       type: replicator
-      icon: replicator
-      listable: hidden
+      sets:
+        main:
+          display: Main
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field:
+                    display: Title
+                    type: text
+                -
+                  handle: description
+                  field:
+                    display: Description
+                    type: textarea
+                    validate:
+                      - required
+                -
+                  handle: has_author
+                  field:
+                    display: 'Has Author'
+                    type: toggle
+                -
+                  handle: author
+                  field:
+                    display: Author
+                    type: section
+                    if:
+                      has_author: 'equals true'
+                -
+                  handle: full_name
+                  field:
+                    display: 'Full Name'
+                    type: text
+                    required:
+                      - 'required_if:has_author,true'
+                    width: 50
+                    if:
+                      has_author: 'equals true'
+                    validate:
+                      - sometimes
+                      - required
+                -
+                  handle: position
+                  field:
+                    display: Position
+                    type: text
+                    if:
+                      has_author: 'equals true'
+                    width: 50
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    max_files: 1
+                    display: Image
+                    type: assets
+                    if:
+                      has_author: 'equals true'

@@ -10,19 +10,12 @@
         </div>
 
         <div
-            class="flex flex-col items-center justify-around space-y-8 md:flex-row xl:justify-between md:space-y-0 md:space-x-4">
+            class="flex flex-col items-center justify-around gap-y-8 md:flex-row xl:justify-between md:gap-y-0 md:gap-x-4">
             {{ prices }}
                 <div class="flex flex-col items-center px-5 bg-white border shadow-xl py-14 rounded-2xl">
                     {{ if icon }}
-                        {{
-                            partial:components/picture
-                            :image="icon"
-                            cover="true"
-                            class="mb-4 max-h-16"
-                            sizes="(min-width: 200px) 35vw, 90vw"
-                        }}
+                        {{ partial:components/picture :image="icon" cover="true" class="mb-4 max-h-16" sizes="(min-width: 200px) 35vw, 90vw" }}
                     {{ /if }}
-
                     {{ if title }}
                         {{ partial:components.heading label="{title}" size="h4" class="mb-2" }}
                     {{ /if }}
@@ -37,10 +30,10 @@
                         {{ /if }}
                     </div>
 
-                    <ul class="flex flex-col space-y-4">
+                    <ul class="flex flex-col gap-y-4">
                         {{ features }}
                             <li class="flex items-center">
-                                {{ svg src="check" class="w-6 h-6 mr-3 fill-current text-accent-blue" }}
+                                {{ svg src="check" class="w-6 h-6 mr-3 fill-current text-accent-blue shrink-0" }}
                                 {{ title }}
                             </li>
                         {{ /features }}

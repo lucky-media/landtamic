@@ -27,7 +27,5 @@ export_paths:
   - public/assets/images
   - public/assets/social
   - package.json
-  - tailwind.config.js
   - vite.config.js
-  - postcss.config.js
   - CHANGELOG.md

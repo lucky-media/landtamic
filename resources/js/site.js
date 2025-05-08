@@ -1,10 +1,11 @@
 // This is all you.
-import "@fontsource/manrope/400.css";
-import "@fontsource/manrope/500.css";
-import "@fontsource/manrope/600.css";
-import "@fontsource/manrope/700.css";
-import "@fontsource/manrope/800.css";
+import "@fontsource-variable/manrope";
+import resize from "@alpinejs/resize";
 
-import Alpine from 'alpinejs'
+import Alpine from "alpinejs";
 
-Alpine.start()
+window.Alpine = Alpine;
+
+Alpine.plugin(resize);
+
+Alpine.start();

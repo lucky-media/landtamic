@@ -1,7 +1,7 @@
 <div class="container py-16 md:py-28 xl:py-40">
     <div class="grid gap-16 md:grid-cols-2 xl:gap-40">
-        <div class="mb-12 space-y-12 md:space-y-20 md:mb-0">
-            {{ if title }}
+        <div class="mb-12 flex flex-col gap-y-12 md:gap-y-20 md:mb-0">
+            {{ if title }} 
                 {{ partial:components.heading label="{title}" size="h3" }}
             {{ /if }}
 
@@ -12,7 +12,7 @@
             {{ /projects }}
         </div>
 
-        <div class="space-y-12 md:space-y-20">
+        <div class=" flex flex-col gap-y-12 md:gap-y-20">
             {{ projects }}
                 {{ if index % 2 === 1 }}
                     {{ partial:components.project_card }}

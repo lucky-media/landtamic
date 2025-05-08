@@ -1,8 +1,7 @@
 title: Theme
 data:
-  logo_normal: images/Dark.svg
-  logo_dark: images/Light.svg
-  logo_mark: images/White.svg
+  logo_normal: images/light.png
+  logo_dark: images/dark.png
   logo_position: left
   menu_position: left
   show_links: true
@@ -11,36 +10,36 @@ data:
       id: BERxnZHF
       toggle: true
       label: Login
-      link: 'https://www.google.com/'
+      link: '#'
       button_variant: secondary
       button_size: md
       target_blank: false
       type: button
-      enabled: true
+      enabled: false
     -
       id: lzTTBofA
       toggle: true
       label: Register
-      link: 'https://www.google.com/'
+      link: '#'
       button_variant: brand
       button_size: md
       target_blank: false
       type: button
-      enabled: true
+      enabled: false
     -
       id: nf7PhgCx
       image: images/apple-store.png
       aria_label: 'Apple Store Link'
       link: 'https://www.apple.com'
       type: image_link
-      enabled: false
+      enabled: true
     -
       id: 3XZwZqQg
       image: images/play-store.png
       aria_label: 'Play Store'
-      link: 'https://www.google.com'
+      link: 'https://play.google.com/'
       type: image_link
-      enabled: false
+      enabled: true
     -
       id: sMuJQfsH
       toggle_social: true
@@ -49,50 +48,50 @@ data:
         -
           id: MQBfpZZ5
           title: Twitter
-          url: www.twitter.com
-          icon: social/twitter-1641400598.svg
+          url: 'https://x.com'
+          icon: social/twitter.svg
         -
           id: H8Smll0M
           title: Facebook
-          url: www.facebook.com
+          url: 'https://www.facebook.com'
           icon: social/facebook-1641400589.svg
         -
           id: GBvgdrzd
           title: Dribble
-          url: www.dribbble.com
+          url: 'https://dribble.com'
           icon: social/dribbble-1641400584.svg
         -
           id: KU9HyX3b
           title: Instagram
-          url: www.instagram.com
+          url: 'https://www.instagram.com'
           icon: social/Instagram-1641400598.svg
         -
           id: jpG9khKh
           title: Behance
-          url: www.behance.com
+          url: 'https://www.behance.net'
           icon: social/behance-1641400629.svg
         -
           id: uI9VCbRT
           title: Github
-          url: www.github.com
+          url: 'https://github.com'
           icon: social/github-1641400598.svg
         -
           id: 0NEOtBhU
           title: Linkedin
-          url: www.linkedin.com
+          url: 'https://www.linkedin.com/'
           icon: social/linkedIn-1641400598.svg
         -
           id: S37nd2nI
           title: Pinterest
-          url: www.pinterest.com
+          url: 'https://www.pinterest.com/'
           icon: social/pinterest-1641400598.svg
         -
           id: bc8O8aIk
           title: Youtube
-          url: www.youtube.com
+          url: 'https://www.youtube.com/'
           icon: social/youtube-1641400598.svg
       type: social_media
-      enabled: false
+      enabled: true
   has_menu: true
   footer_menu: footer_nav
   custom_column: true
@@ -103,6 +102,8 @@ data:
       image: images/Light.svg
       type: image
       enabled: true
+      logo_normal: images/dark.svg
+      logo_dark: images/light.svg
     -
       id: lEesJA9d
       rich_text:
@@ -157,20 +158,22 @@ data:
         -
           id: mHV2GK4I
           title: Twitter
-          url: www.twitter.com
-          icon: social/twitter-1641400598.svg
+          url: 'https://x.com'
+          icon: social/twitter.svg
         -
           id: m8xtawPM
           title: Github
-          url: www.github.com
+          url: 'https://github.com'
           icon: social/github-1641400598.svg
         -
           id: xClG2Ill
           title: Youtube
-          url: www.youtube.com
+          url: 'https://www.youtube.com/'
           icon: social/youtube-1641400598.svg
-  logo_overlay: false
-  display_divider: false
+  logo_overlay: true
+  logo_overlay_position: left
+  display_divider: true
+  divider_style: contained
   footer_items:
     -
       id: fFwSDEXx
@@ -196,10 +199,9 @@ data:
               text: 'Lucky Media'
       type: copyright
       enabled: true
-      align: left
+      align: center
     -
       id: ewjDOfNB
-      image: images/Light.svg
       type: image
       enabled: true
       align: center
@@ -223,15 +225,15 @@ data:
         -
           type: text
           text: 'The page cannot be found.'
-  page_image: images/outer_space.png
-  page_image_position: right
+  page_image_position: left
   page_toggle: true
   page_label: 'Go Back'
   page_link: /
-  page_button_variant: brand
-  page_button_size: xl
+  page_button_variant: primary
+  page_button_size: lg
   page_target_blank: false
   sitemap_collections:
     - pages
+    - posts
   sitemap_change_frequency: weekly
   sitemap_priority: 0.5

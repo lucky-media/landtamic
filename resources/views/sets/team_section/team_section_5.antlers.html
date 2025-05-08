@@ -14,7 +14,7 @@
                 <div class="px-4 mb-12 md:w-1/2 md:mb-24">
                     <div class="flex flex-col lg:flex-row">
                         {{ if image }}
-                            <div class="flex-shrink-0 overflow-hidden md:w-64 rounded-2xl">
+                            <div class="shrink-0 overflow-hidden md:w-64 rounded-2xl">
                                 {{
                                     partial:components/picture
                                     :image="image"
@@ -39,7 +39,7 @@
                                     {{ social }}
                                         <li>
                                             <a aria-label="visit {{ icon }}"
-                                                class="flex items-center justify-center flex-shrink-0 w-8 h-8"
+                                                class="flex items-center justify-center shrink-0 w-8 h-8"
                                                 href="{{ url }}">
                                                 {{ svg :src="icon" class="w-6 h-6 fill-current text-primary-900"
                                                 }}

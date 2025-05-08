@@ -1,17 +1,9 @@
-{{ $social_align = switch(
-    (align == 'left') => 'mr-auto',
-    (align == 'right') => 'ml-auto',
-    () => 'mx-auto')
-}}
-
-<ul class="flex flex-row items-center space-x-6 {{ $social_align }}">
+<ul class="flex flex-row items-center gap-x-6 mr-auto">
     {{ social }}
         <li class="group">
-            <a aria-label="visit {{ icon }}"
-                href="{{ url }}"
-                class="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-in-out bg-white rounded-full bg-opacity-10 group-hover:bg-opacity-100">
-                {{ svg :src="icon" class="w-6 h-6 text-white fill-current group-hover:text-black"
-                }}
+            <a aria-label="visit {{ icon }}" href="{{ url }}" target="_blank"
+                class="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-in-out bg-white/10 rounded-full group-hover:bg-white">
+                {{ svg :src="icon" class="w-6 h-6 text-white fill-current group-hover:text-black" }}
             </a>
         </li>
     {{ /social }}

@@ -4,122 +4,93 @@ fields:
     handle: blocks
     field:
       collapse: accordion
+      display: Blocks
+      type: replicator
       sets:
         main:
           display: Main
-          instructions: null
-          icon: null
           sets:
             cta_section:
               display: 'CTA Section'
-              instructions: null
               icon: align-object-center
               fields:
                 -
                   import: cta_section
             contact_section:
               display: 'Contact Section'
-              instructions: null
               icon: mail-sign-at
               fields:
                 -
                   import: contact_section
             feature_multiple:
               display: 'Feature Multiple'
-              instructions: null
               icon: layout-display-split-quarters
               fields:
                 -
                   import: feature_multiple
             feature_single:
               display: 'Feature Single'
-              instructions: null
               icon: layout-flip-left
               fields:
                 -
                   import: feature_single
             hero:
               display: Hero
-              instructions: null
               icon: layout-split-verical
               fields:
                 -
                   import: hero
             logo_cloud:
               display: 'Logo Cloud'
-              instructions: null
               icon: dashboard-layout
               fields:
                 -
                   import: logo_cloud
             pricing_section:
               display: 'Pricing Section'
-              instructions: null
               icon: money-cashier-price-tag
               fields:
                 -
                   import: pricing_section
             project_multiple:
               display: 'Project Multiple'
-              instructions: null
               icon: layout-grid-dots
               fields:
                 -
                   import: project_multiple
             project_single:
               display: 'Project Single'
-              instructions: null
               icon: layout-split-right
               fields:
                 -
                   import: project_single
             small_link:
               display: 'Small Link'
-              instructions: null
               icon: link
               fields:
                 -
                   import: small_link
-            social_media:
-              display: 'Social Media'
-              instructions: null
-              icon: globe-world-wide-web
-              fields:
-                -
-                  import: social_media
             stats:
               display: Stats
-              instructions: null
               icon: addon-boxes-stack
               fields:
                 -
                   import: stats
             steps:
               display: Steps
-              instructions: null
               icon: programming-script-code-brackets
               fields:
                 -
                   import: steps
             team_section:
               display: 'Team Section'
-              instructions: null
               icon: id-face-scan
               fields:
                 -
                   import: team_section
             testimonial:
               display: Testimonial
-              instructions: null
               icon: user-multiple
               fields:
                 -
                   import: testimonial
-      display: Blocks
-      type: replicator
-      icon: replicator
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      previews: true
-      hide_display: false

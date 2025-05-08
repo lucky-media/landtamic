@@ -1,7 +1,7 @@
 title: Theme
 data:
-  logo_normal: logo/Light.png
-  logo_dark: logo/Dark.png
+  logo_normal: images/light.png
+  logo_dark: images/dark.png
   logo_position: left
   menu_position: left
   show_links: true

@@ -1,0 +1,41 @@
+<div class="container xl:absolute w-full xl:top-24 xl:z-50 xl:left-1/2 xl:-translate-x-1/2">
+    <div class="flex md:flex-row flex-col rounded-lg max-xl:py-6 xl:p-6 gap-6 shadow-sub-nav bg-white">
+        <div class="md:w-1/2 xl:w-3/4 flex max-md:justify-between gap-10 flex-wrap">
+            {{ children }}
+                <div>
+                    <{{ url ? 'a' : 'p' }} {{ url ?= 'href="{url}"' }}>
+                        <span class="text-sm uppercase text-neutral-600 neutral:text-neutral-400">{{ title }}</span>
+                    </{{ url ? 'a' : 'p' }}>
+                    <ul class="flex flex-col gap-y-3 mt-4">
+                        {{ children }}
+                            <li>
+                                <a href="{{ url }}" aria-label="{{ title }}"
+                                    class="inline-block py-2 text-xl font-bold text-gray-900 no-underline transition-all duration-300 ease-in-out lg:text-sm lg:py-0 lg:px-0 hover:text-secondary-900">
+                                    {{ title }}
+                                </a>
+                            </li>
+                        {{ /children }}
+                    </ul>
+                </div>
+            {{ /children }}
+        </div>
+        <div class="w-full lg:w-1/2 xl:w-1/4 bg-primary-100 rounded-lg p-4 relative overflow-hidden z-0">
+            <p class="mb-4 text-sm uppercase text-gray-800 ">Follow Us</p>
+            {{ theme:links }}
+                <div class="grid grid-cols-5 gap-x-6 gap-y-4 z-20">
+                    {{ social }}
+                        {{ partial:partials/social_link_icon }}
+                    {{ /social }}
+                </div>
+            {{ /theme:links }}
+
+            <div
+                class="absolute w-80 h-10 right-0 bottom-16 rotate-[170deg] blur-lg bg-gradient-to-br from-transparent via-primary-900 opacity-20 to-transparent -z-10">
+            </div>
+
+            <div
+                class="absolute w-80 h-10 right-0 bottom-0 rotate-[170deg] blur bg-gradient-to-br from-transparent via-primary-900 opacity-20 to-transparent -z-10">
+            </div>
+        </div>
+    </div>
+</div>

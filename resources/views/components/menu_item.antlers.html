@@ -1,17 +1,23 @@
-{{ if toggle_button }}
-    <li class="py-2 lg:py-0">
-        {{
-            partial:components.button
-            link="{url}"
-            color="{button_variant}"
-            size="{button_size}"
-            label="{title}"
-        }}
+{{ if children }}
+    <li>
+        <button type="button" @click="activeSubMenu = activeSubMenu === '{{ id }}' ? null : '{{ id }}'"
+            @mouseenter="timeout = setTimeout(() => { activeSubMenu = '{{ id }}' }, 300)"
+            @mouseleave="clearTimeout(timeout)" class="inline-flex items-center group">
+
+            <span
+                class="py-2 mr-1 text-xl font-bold text-gray-900 no-underline transition-all duration-300 ease-in-out lg:text-sm lg:py-0 lg:px-0 group-hover:text-secondary-900">
+                {{ title }}
+            </span>
+
+            <div :class="{ 'rotate-180': activeSubMenu === '{{ id }}' }">
+                {{ svg src='chevron' class='h-5 w-5 fill-current text-gray-900 transition-all duration-300 ease-in-out group-hover:text-secondary-900' }}
+            </div>
+        </button>
     </li>
 {{ else }}
     <li>
-        <a class="inline-block py-2 text-xl font-bold text-gray-900 no-underline transition-all duration-300 ease-in-out lg:text-sm lg:py-0 lg:px-0 hover:text-secondary-900"
-            href="{{ url }}">
+        <a href="{{ url }}" aria-label="{{ title }}"
+            class="inline-block py-2 text-xl font-bold text-gray-900 no-underline transition-all duration-300 ease-in-out lg:text-sm lg:py-0 lg:px-0 hover:text-secondary-900">
             {{ title }}
         </a>
     </li>

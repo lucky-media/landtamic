@@ -19,7 +19,7 @@
                 </div>
             {{ /if }}
             <div class="container py-4 md:py-7">
-                <div class="grid gap-8 py-16 md:grid-cols-2 lg:grid-cols-4">
+                <div class="grid gap-8 py-16 md:grid-cols-2 lg:grid-cols-4 relative z-10">
                     {{ if theme:custom_column }}
                         {{ partial:layout/footer-items/column }}
                     {{ /if }}
@@ -30,7 +30,7 @@
                                 {{ title }}
                             </p>
                             {{ if children }}
-                                <ul class="space-y-3">
+                                <ul class="flex flex-col gap-y-3">
                                     {{ children }}
                                         {{ partial:partials/footer_menu_item }}
                                     {{ /children }}
@@ -40,15 +40,15 @@
                     {{ /nav }}
                 </div>
 
-                {{ if theme:divider_style === 'logo' }}
+                {{ if theme:display_divider && theme:divider_style === 'logo' }}
                     {{ partial:layout/footer-items/logo_divider }}
                 {{ /if }}
             </div>
         </div>
     {{ /if }}
 
-    <div class="{{ theme:divider_style === 'full' ?= 'border-t border-white border-opacity-10' }}">
-        <div class="container py-4 md:py-7 {{ theme:divider_style === 'contained' ?= 'border-t border-white border-opacity-10' }}">
+    <div class="{{ theme:display_divider && theme:divider_style === 'full' ?= 'border-t border-white/10' }}">
+        <div class="container py-4 md:py-7 {{ theme:display_divider && theme:divider_style === 'contained' ?= 'border-t border-white/10' }}">
             <div class="grid gap-4 {{ $grid_classes }}">
                 {{ theme:footer_items }}
                     {{ partial src="layout/footer-items/{type}" }}

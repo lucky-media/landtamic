@@ -7,7 +7,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
         {{ features }}
                 <{{ has_link ? 'a' : 'div' }} {{ if has_link }} href="{{ link }}" {{ /if }}>
-                    <div class="w-full overflow-hidden rounded max-h-64">
+                    <div class="w-full overflow-hidden rounded-sm max-h-64">
                       {{
                         partial:components/picture
                         :image="image"

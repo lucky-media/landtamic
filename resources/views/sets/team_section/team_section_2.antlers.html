@@ -22,7 +22,7 @@
                                 }}
                             </div>
                         {{ /if }}
-                        <div class="flex flex-col mb-4 space-y-2">
+                        <div class="flex flex-col mb-4 gap-y-2">
                             {{ partial:components.heading label="{full_name}" size="h6" }}
 
                             {{ if position }}
@@ -31,11 +31,11 @@
                         </div>
                     </div>
                     {{ if social }}
-                        <ul class="flex flex-row space-x-1">
+                        <ul class="flex flex-row gap-x-1">
                             {{ social }}
                                 <li class="bg-primary-900">
                                     <a aria-label="visit {{ icon }}"
-                                        class="flex items-center justify-center flex-shrink-0 w-8 h-8"
+                                        class="flex items-center justify-center shrink-0 w-8 h-8"
                                         href="{{ url }}">
                                         {{ svg :src="icon" class="w-6 h-6 text-white fill-current"
                                         }}

@@ -6,7 +6,7 @@
     {{ /if }}
     <div class="grid grid-cols-1 gap-20 md:grid-cols-2">
         {{ projects }}
-            <div class="pb-6 space-y-6 border-b border-gray-100">
+            <div class="pb-6 flex flex-col gap-y-6 border-b border-gray-100">
                 {{ if title }}
                     {{ partial:components.heading label="{title}" size="h4" }}
                 {{ /if }}

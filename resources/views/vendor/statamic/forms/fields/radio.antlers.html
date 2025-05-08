@@ -1,8 +1,8 @@
-<div class="flex {{ inline ? 'space-x-4' : 'flex-col space-y-4' }}">
+<div class="flex {{ inline ?= 'gap-x-4' : 'flex-col gap-y-4' }}">
     {{ foreach:options as="value|label" }}
         <label class="inline-flex items-center">
             <input
-                class="mr-3 focus:outline-none text-primary-900 focus:ring-2 focus:ring-primary-900 focus:ring-opacity-50"
+                class="mr-3 focus:outline-hidden text-primary-900 focus:ring-2 focus:ring-primary-900/50"
                 type="radio" name="{{ handle }}"
                 value="{{ value }}" {{ old === value ?= " checked" }}
             {{ if validate|contains:required }} required{{ /if }}>

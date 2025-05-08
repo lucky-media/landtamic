@@ -14,43 +14,25 @@ fields:
       display: 'Step Variant'
       default: steps_section_1
       type: button_group
-      icon: button_group
       instructions: 'Please select a step variant'
-      listable: hidden
       validate:
         - required
   -
     handle: title
     field:
-      input_type: text
-      antlers: false
       display: Title
       type: text
-      icon: text
-      listable: hidden
   -
     handle: description
     field:
-      antlers: false
       display: Description
       type: textarea
-      icon: textarea
-      listable: hidden
-  -
-    handle: image
-    field:
-      mode: grid
-      container: assets
-      restrict: false
-      allow_uploads: true
-      display: Image
-      type: assets
-      icon: assets
-      listable: hidden
   -
     handle: steps
     field:
       collapse: accordion
+      display: Steps
+      type: replicator
       sets:
         new_set:
           display: 'New Set'
@@ -84,7 +66,3 @@ fields:
                 icon: assets
                 listable: hidden
                 max_files: 1
-      display: Steps
-      type: replicator
-      icon: replicator
-      listable: hidden

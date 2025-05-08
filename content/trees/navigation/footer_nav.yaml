@@ -48,12 +48,14 @@ tree:
       -
         id: f82612b2-889c-4e2e-a9ba-d163cefe6c23
         title: hello@luckymedia.dev
+        url: hello@luckymedia.dev
         data:
           has_icon: true
           icon: mail
       -
         id: 3fa46a4f-b24a-4d1f-814d-1e7ffeb93720
         title: '+91 98765 43210'
+        url: '+91 98765 43210'
         data:
           has_icon: true
           icon: phone

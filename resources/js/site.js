@@ -4,7 +4,12 @@ import "@fontsource/manrope/500.css";
 import "@fontsource/manrope/600.css";
 import "@fontsource/manrope/700.css";
 import "@fontsource/manrope/800.css";
+import resize from "@alpinejs/resize";
 
-import Alpine from 'alpinejs'
+import Alpine from "alpinejs";
 
-Alpine.start()
+window.Alpine = Alpine;
+
+Alpine.plugin(resize);
+
+Alpine.start();
